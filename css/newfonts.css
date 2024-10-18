@@ -1,10 +1,9 @@
 /* font face for General Sans font.
    Upload the files to the "Files" section in Shopify.
-   Then copy/paste the url to the url under "src" for it
-   to work.
+   Then copy the url in the Files section and paste it to the "src" url for it to work.
    Finally, add {{ 'newfonts.css' | asset_url | stylesheet_tag }} to theme.liquid for this to work.
-   Preferably under base.css (use control+f to find it)
-   */
+   Add it preferably under base.css (use control+f to find it)
+*/
    
    @font-face {
     font-family: "General Sans";
