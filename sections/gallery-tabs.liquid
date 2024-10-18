@@ -1,0 +1,171 @@
+<!-- Gallery-Tabs -->
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    /*background-color: #152b4f;*/
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+   @media screen and (max-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 48px;
+      padding-bottom: 10px;
+    }
+  }
+{% endstyle %}
+
+<!-- tabs script -->
+
+<div class="main-tabs-gallery color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="plan-controls">
+      {% for block in section.blocks %}
+        {% if block.settings.category %}
+          <button
+            type="button"
+            class="btn btn-control tab-link"
+            id="btn{{ forloop.index }}"
+            data-tab="{{ forloop.index }}"
+          >
+            {{ block.settings.category }}
+          </button>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% for block in section.blocks %}
+      <div class="table-main" id="tab-{{ forloop.index }}">
+        <div class="left-tab-img">
+          {% if block.settings.left_image %}
+            {{
+              block.settings.left_image
+              | image_url: width: 1500, height: 1350
+              | image_tag:
+                alt: block.settings.left_image_alt,
+                sizes: '(min-width: 1400px) 650px,(min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)'
+            }}
+          {% endif %}
+        </div>
+        <div class="right-tab-img">
+          {% if block.settings.right_image_1 %}
+            {{
+              block.settings.right_image_1
+              | image_url: width: 1500, height: 500
+              | image_tag:
+                alt: block.settings.right_image_alt,
+                sizes: '(min-width: 1400px) 650px,(min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)'
+            }}
+          {% endif %}
+          {% if block.settings.right_image_2 %}
+            {{
+              block.settings.right_image_2
+              | image_url: width: 1500, height: 500
+              | image_tag:
+                alt: block.settings.right_image_alt_2,
+                sizes: '(min-width: 1400px) 650px,(min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)'
+            }}
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttonTabs = document.querySelectorAll('.tab-link');
+    const imagesFromTabs = document.querySelectorAll('.table-main');
+    const mainGallery = document.querySelector('.main-tabs-gallery');
+
+    buttonTabs[0].classList.add('active');
+    imagesFromTabs[0].classList.add('active');
+
+    buttonTabs.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+
+        // Select all children with the "active" class
+        const activeButtonTabs = mainGallery.querySelectorAll('.tab-link.active');
+        const activeImagesFromTabs = mainGallery.querySelectorAll('.table-main.active');
+
+        // Loop through each active child and remove the "active" class
+        activeButtonTabs.forEach(child => {
+          child.classList.remove('active');
+        });
+
+         activeImagesFromTabs.forEach(child => {
+          child.classList.remove('active');
+        });
+
+        // Add new "active" class
+        buttonTabs[index].classList.add('active');
+        imagesFromTabs[index].classList.add('active');
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Gallery Tabs",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category with Images",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Category"
+        },
+        {
+          "type": "image_picker",
+          "id": "left_image",
+          "label": "Main image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_1",
+          "label": "Smaller image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "right_image_2",
+          "label": "Smaller image 2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gallery Tabs",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
