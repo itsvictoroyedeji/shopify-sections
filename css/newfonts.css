@@ -1,0 +1,124 @@
+/* font face for General Sans font.
+   Upload the files to the "Files" section in Shopify.
+   Then copy/paste the url to the url under "src" for it
+   to work.
+   Finally, add {{ 'newfonts.css' | asset_url | stylesheet_tag }} to theme.liquid for this to work.
+   Preferably under base.css (use control+f to find it)
+   */
+   
+   @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-Extralight.woff2")
+      format("woff2");
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-ExtralightItalic.woff2")
+      format("woff2");
+    font-weight: 200;
+    font-display: swap;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-Light.woff2")
+      format("woff2");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-LightItalic.woff2")
+      format("woff2");
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-Regular.woff2")
+      format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-Italic.woff2")
+      format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-Medium.woff2")
+      format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-MediumItalic.woff2")
+      format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-Semibold.woff2")
+      format("woff2");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-SemiboldItalic.woff2")
+      format("woff2");
+    font-weight: 600;
+    font-display: swap;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-Bold.woff2")
+      format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-BoldItalic.woff2")
+      format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-Variable.woff2")
+      format("woff2");
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "General Sans";
+    src: url("https://cdn.shopify.com/s/files/1/0622/8072/8756/files/GeneralSans-VariableItalic.woff2")
+      format("woff2");
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: italic;
+  }
+  
+  
