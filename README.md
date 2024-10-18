@@ -4,6 +4,8 @@ I created several custom sections for Shopify. So I kept them here.
 
 ## To use
 
+Create 2 files: `flickity.css` and `flickity.pkgd.min.js` under the `Assets` folder in Shopify. Then copy the code I have (from the same filenames) and paste into Shopify. e.g: `assets/flickty.css` `assets/flickity.pkgd.min.js`
+
 Copy the `base.css` file and paste it to the bottom of your `assets/base.css` file in Shopify. 
 
 Then create a `mobile.css` file under `Assets` in Shopify and copy/paste my `mobile.css` code to your new assets/mobile.css file in Shopify.
@@ -17,7 +19,7 @@ Then create a `mobile.css` file under `Assets` in Shopify and copy/paste my `mob
 - Repeat the same steps for the rest of the liquid files.
 
 ```
-For image-banner.liquid and video.liquid, the files are already in Shopify. Simple copy and paste my code to replace the Shopify code there.
+For video.liquid, the files are already in Shopify. Simple copy and paste my code to replace the Shopify code already there.
 ```
 
 ## How to use
