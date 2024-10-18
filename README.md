@@ -19,7 +19,7 @@ Then create a `mobile.css` file under `Assets` in Shopify and copy/paste my `mob
 - Repeat the same steps for the rest of the liquid files.
 
 ```
-For video.liquid, the files are already in Shopify. Simple copy and paste my code to replace the Shopify code already there.
+For `video.liquid`, the files are already in Shopify. Simply copy and paste my code to replace the Shopify code already there.
 ```
 
 ## How to use
