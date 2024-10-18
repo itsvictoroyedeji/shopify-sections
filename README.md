@@ -7,6 +7,8 @@ I created several custom sections to enhance my Shopify stores. So I decided to 
 
 In Shopify, create 4 files: `flickity.css`, `flickity.pkgd.min.js`, `custom.css`, and `mobile.css` under the `Assets` folder in Shopify.
 
+(Optionally, you can create a 5th file: `newfonts.css` if you want to add custom fonts using `@font-face`).
+
 Then copy the codes here (from the same filenames) and paste into Shopify. e.g: `assets/flickty.css`, `assets/flickity.pkgd.min.js`, etc.
 
 ## After that...
