@@ -1,0 +1,402 @@
+<style>
+  .main-dot-and-content {
+    width: fit-content;
+    --hot-spot-dot-size: var(--spacing-8);
+    --hot-spot-dot-shadow-size: var(--spacing-2-5);
+    position: absolute !important;
+    top: var(--hot-spot-vertical-position-desktop);
+    left: var(--hot-spot-horizontal-position-desktop);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .main-dot-and-content {
+      top: var(--hot-spot-vertical-position-tablet);
+      left: var(--hot-spot-horizontal-position-tablet);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .main-dot-and-content {
+      top: var(--hot-spot-vertical-position-mobile);
+      left: var(--hot-spot-horizontal-position-mobile);
+    }
+  }
+</style>
+
+{% style %}
+  #block-{{ section.id }}-centerdotsdetails_Qm34K8 {
+    --hot-spot-horizontal-position-desktop: 74%;
+    --hot-spot-vertical-position-desktop: 33%;
+    --hot-spot-horizontal-position-tablet: 30%;
+    --hot-spot-vertical-position-tablet: 30%;
+    --hot-spot-horizontal-position-mobile: 61%;
+    --hot-spot-vertical-position-mobile: 29%;
+  }
+
+
+  #block-{{ section.id }}-centerdotsdetails_8jMJ7h {
+    --hot-spot-horizontal-position-desktop: 64%;
+    --hot-spot-vertical-position-desktop: 58%;
+    --hot-spot-horizontal-position-tablet: 30%;
+    --hot-spot-vertical-position-tablet: 57%;
+    --hot-spot-horizontal-position-mobile: 52%;
+    --hot-spot-vertical-position-mobile: 61%;
+  }
+
+
+  #block-{{ section.id }}-centerdotsdetails_aAbXnw {
+    --hot-spot-horizontal-position-desktop: 32%;
+    --hot-spot-vertical-position-desktop: 82%;
+    --hot-spot-horizontal-position-tablet: 30%;
+    --hot-spot-vertical-position-tablet: 30%;
+    --hot-spot-horizontal-position-mobile: 33%;
+    --hot-spot-vertical-position-mobile: 81%;
+  }
+
+
+  #block-{{ section.id }}-centerdotsdetails_Xqr4bX {
+    --hot-spot-horizontal-position-desktop: 9%;
+    --hot-spot-vertical-position-desktop: 86%;
+    --hot-spot-horizontal-position-tablet: 30%;
+    --hot-spot-vertical-position-tablet: 30%;
+    --hot-spot-horizontal-position-mobile: 13%;
+    --hot-spot-vertical-position-mobile: 85%;
+  }
+
+
+  #block-{{ section.id }}-centerdotsdetails_YNALga {
+    --hot-spot-horizontal-position-desktop: 86%;
+    --hot-spot-vertical-position-desktop: 92%;
+    --hot-spot-horizontal-position-tablet: 30%;
+    --hot-spot-vertical-position-tablet: 95%;
+    --hot-spot-horizontal-position-mobile: 88%;
+    --hot-spot-vertical-position-mobile: 87%;
+  }
+
+
+  .section-{{ section.id }}-padding {
+    padding-top: 21px;
+    padding-bottom: 27px;
+    /* background-color: #f4f8fb; */
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 28px;
+      padding-bottom: 36px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 0px;
+      padding-bottom: 36px;
+    }
+  }
+{% endstyle %}
+
+<div class="main-hotspots-sec color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="top-content-hotspot">
+      <h2>{{ section.settings.header }}</h2>
+      <h3>{{ section.settings.subheader }}</h3>
+    </div>
+
+    <div class="inner-main-hotspots-and-titles">
+      <div class="left-data-hostpot">
+        {% for block in section.blocks %}
+          <div class="left-inner-single-data-hostpot">
+            <h2>{{ block.settings.left_header }}</h2>
+            <h3>{{ block.settings.left_text }}</h3>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="center-data-hostpot">
+        <!-- Main Image for Dots -->
+        <div class="hotspot-image-main">
+          {% if section.settings.image %}
+            {{
+              section.settings.image
+              | image_url: width: 1500, height: 2200
+              | image_tag:
+                alt: section.settings.image_alt_text,
+                loading: 'lazy',
+                sizes: '(min-width: 1400px) 1300px, (min-width: 750px) calc((100vw - 130px) / 1), calc((100vw - 50px) / 1)'
+            }}
+          {% endif %}
+          <!-- Dots -->
+          {% if section.settings.dot_description_1 != blank %}
+            <div id="block-{{ section.id }}-centerdotsdetails_Qm34K8" class="main-dot-and-content">
+              <div class="main-dot-hotspot">
+                <div class="hotspot__positioner--01">
+                  <div class="hotspot__container">
+                    <div class="hotspot-dott hotspot--01"></div>
+                    <div class="hotspot-dott hotspot--02"></div>
+                    <div class="hotspot-dott hotspot--03"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-dot-and-content-only">
+                <h5></h5>
+                <span>
+                  <p>{{ section.settings.dot_description_1 }}</p>
+                </span>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if section.settings.dot_description_2 != blank %}
+            <div id="block-{{ section.id }}-centerdotsdetails_8jMJ7h" class="main-dot-and-content">
+              <div class="main-dot-hotspot">
+                <div class="hotspot__positioner--01">
+                  <div class="hotspot__container">
+                    <div class="hotspot-dott hotspot--01"></div>
+                    <div class="hotspot-dott hotspot--02"></div>
+                    <div class="hotspot-dott hotspot--03"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-dot-and-content-only">
+                <h5></h5>
+                <span>
+                  <p>{{ section.settings.dot_description_2 }}</p>
+                </span>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if section.settings.dot_description_3 != blank %}
+            <div id="block-{{ section.id }}-centerdotsdetails_aAbXnw" class="main-dot-and-content">
+              <div class="main-dot-hotspot">
+                <div class="hotspot__positioner--01">
+                  <div class="hotspot__container">
+                    <div class="hotspot-dott hotspot--01"></div>
+                    <div class="hotspot-dott hotspot--02"></div>
+                    <div class="hotspot-dott hotspot--03"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-dot-and-content-only">
+                <h5></h5>
+                <span>
+                  <p>{{ section.settings.dot_description_3 }}</p>
+                </span>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if section.settings.dot_description_4 != blank %}
+            <div id="block-{{ section.id }}-centerdotsdetails_Xqr4bX" class="main-dot-and-content">
+              <div class="main-dot-hotspot">
+                <div class="hotspot__positioner--01">
+                  <div class="hotspot__container">
+                    <div class="hotspot-dott hotspot--01"></div>
+                    <div class="hotspot-dott hotspot--02"></div>
+                    <div class="hotspot-dott hotspot--03"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-dot-and-content-only">
+                <h5></h5>
+                <span>
+                  <p>{{ section.settings.dot_description_4 }}</p>
+                </span>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if section.settings.dot_description_5 != blank %}
+            <div id="block-{{ section.id }}-centerdotsdetails_YNALga" class="main-dot-and-content">
+              <div class="main-dot-hotspot">
+                <div class="hotspot__positioner--01">
+                  <div class="hotspot__container">
+                    <div class="hotspot-dott hotspot--01"></div>
+                    <div class="hotspot-dott hotspot--02"></div>
+                    <div class="hotspot-dott hotspot--03"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-dot-and-content-only">
+                <h5></h5>
+                <span>
+                  <p>{{ section.settings.dot_description_5 }}</p>
+                </span>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="right-data-hostpot">
+        {% for block in section.blocks %}
+          <div class="right-inner-data-hostpot">
+            <h2>{{ block.settings.right_header }}</h2>
+            <p>{{ block.settings.right_text }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Get all the main-dot-and-content elements
+  const dots = document.querySelectorAll('.main-dot-and-content');
+
+  // Add a click event listener to each
+  dots.forEach(dot => {
+  dot.addEventListener('click', function(event) {
+  // Prevent the document click event from firing
+  event.stopPropagation();
+
+  // Remove 'activetedcurrent' class from all dots
+  dots.forEach(d => d.classList.remove('activetedcurrent'));
+
+  // Add 'activetedcurrent' class to the clicked dot
+  this.classList.add('activetedcurrent');
+    });
+  });
+
+  // Add a click event listener to the document
+  document.addEventListener('click', function() {
+  // Remove 'activetedcurrent' class from all dots when clicking outside
+  dots.forEach(d => d.classList.remove('activetedcurrent'));
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Image with Hot Spots",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Heading Line 1",
+      "default": "This Product"
+    },
+    {
+      "type": "text",
+      "id": "subheader",
+      "label": "Heading Line 2",
+      "default": "That Does It All"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Main Image",
+      "info": "Main image Hot Spots will go on (best if transparent)"
+    },
+    {
+      "type": "text",
+      "id": "image_alt_text",
+      "label": "Alt text for image",
+      "info": "Describe image for screen readers"
+    },
+    {
+      "type": "text",
+      "id": "dot_description_1",
+      "label": "Dot 1 Benefit/Description",
+      "info": "This appears after user click on Dot 1's hotspot"
+    },
+    {
+      "type": "text",
+      "id": "dot_description_2",
+      "label": "Dot 2 Benefit/Description",
+      "info": "This appears after user click on Dot 2's hotspot"
+    },
+    {
+      "type": "text",
+      "id": "dot_description_3",
+      "label": "Dot 3 Benefit/Description",
+      "info": "This appears after user click on Dot 3's hotspot"
+    },
+    {
+      "type": "text",
+      "id": "dot_description_4",
+      "label": "Dot 4 Benefit/Description",
+      "info": "This appears after user click on Dot 4's hotspot"
+    },
+    {
+      "type": "text",
+      "id": "dot_description_5",
+      "label": "Dot 5 Benefit/Description",
+      "info": "This appears after user click on Dot 5's hotspot"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "left-text",
+      "name": "Left Side Description",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "left_header",
+          "label": "Header",
+          "default": "1-3 Word Benefit",
+          "info": "Only appears on tablets and bigger screens. Not mobile phones."
+        },
+        {
+          "type": "textarea",
+          "id": "left_text",
+          "label": "Text Description",
+          "default": "More info on the product's benefit.",
+          "info": "Only appears on tablets and bigger screens. Not mobile phones."
+        }
+      ]
+    },
+    {
+      "type": "right-text",
+      "name": "Main Side Description",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "right_header",
+          "label": "Main Header",
+          "default": "1-3 Word Benefit",
+          "info": "THIS BENEFIT will appear on mobile, tablet, and bigger screens."
+        },
+        {
+          "type": "textarea",
+          "id": "right_text",
+          "label": "Text Description",
+          "default": "More info on the product's benefit.",
+          "info": "THIS BENEFIT will appear on mobile, tablet, and bigger screens."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Hot Spots",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "right-text"
+        },
+        {
+          "type": "right-text"
+        },
+        {
+          "type": "right-text"
+        },
+        {
+          "type": "left-text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

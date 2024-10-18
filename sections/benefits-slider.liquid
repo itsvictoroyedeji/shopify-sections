@@ -1,0 +1,222 @@
+<!-- benefits-slider -->
+
+<script src="{{ 'flickity.pkgd.min.js' | asset_url }}" defer></script>
+<link rel="stylesheet" href="{{ 'flickity.css' | asset_url }}">
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: 36px;
+    padding-bottom: 75px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 48px;
+      padding-bottom: 100px;
+    }
+  }
+   @media screen and (max-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 48px;
+      padding-bottom: 68px;
+    }
+  }
+
+  .carousel__cell.benefits-car-cell img {
+      max-width: 100%;
+      width: 70px;
+  }
+
+  .X-benefits h2,
+  .X-benefits p{
+      text-align: left;
+  }
+
+  .benefits___slider .carousel__cell{
+      grid-template-columns: auto auto;
+      display: grid;
+      gap: 20px;
+      padding:28px;
+  }
+
+  .benefits-car-cell h2{
+    color:#142B4F;
+    font-family: "General Sans";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4;
+
+  }
+  .benefits-car-cell p{
+    color:#142B4F;
+    font-family: "General Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4;
+
+  }
+
+  @media screen and (max-width:1400px) {
+    .benefits-car-cell h2 {
+      font-size:22px;
+    }
+  }
+  @media screen and (max-width:1199px) {
+    .benefits-car-cell h2 {
+      font-size:18px;
+    }
+    .benefits-car-cell p {
+      font-size:14px;
+    }
+    .section-{{ section.id }}-padding .carousel__cell { padding:15px; }
+  }
+
+  @media (max-width: 500px) {
+    .section-{{ section.id }}-padding .carousel__cell.meet-our-fans-car-cell {
+      width: 85% !important;
+    }
+  }
+{%- endstyle -%}
+
+<div class="benefits_Slider color-{{ section.settings.color_scheme }} flickity-section-{{ section.id }} isolate gradient flickity-index-slider section-{{ section.id }}-padding">
+  <div class="page-width title-btn-and-description-benefits-slider ">
+    <div class="title-description-benefits-slider">
+      <h2 class="title-benefits-slider-h2 hxl">
+        {{ section.settings.header_title }}
+      </h2>
+    </div>
+    <div class="btn-benefits-slider"></div>
+  </div>
+
+  <!-- Benefits carousel -->
+  <div
+    class="flickity-section__carousel carousel-{{ section.id }} text-center"
+    data-flickity='
+      {
+        "cellAlign": "left",
+        "pageDots": true,
+        "freeScroll": true,
+        "contain": true,
+        "wrapAround": true
+      }
+    '
+  >
+    {% for block in section.blocks %}
+      <div
+        class="carousel__cell benefits-car-cell color-{{ block.settings.color_scheme }}"
+        style="width: 30%; margin-right: 15px;"
+      >
+        {% if block.settings.image %}
+          {{
+            block.settings.image
+            | image_url: width: 1500, height: 1530
+            | image_tag:
+              alt: block.settings.header_alt_text,
+              loading: 'lazy',
+              sizes: '(min-width: 1400px) 433px,
+(min-width: 750px) calc((100vw - 130px) / 1), calc((100vw - 50px) / 1)'
+          }}
+        {% endif %}
+        <div class="X-benefits">
+          <h2>{{ block.settings.benefits_heading }}</h2>
+          <p>{{ block.settings.benefits_text }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} .carousel__cell {
+    min-height: 150px;
+    height: 100%;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Product Benefits Slider",
+  "tag": "section",
+  "class": "benefits___slider",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "header_title",
+      "label": "Header",
+      "default": "Features & Tech Specs"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks":[
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 6,
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Header Image",
+          "info": "Best if image is transparent"
+        },
+        {
+          "type": "text",
+          "id": "header_alt_text",
+          "label": "header image \"alt\" text",
+          "info": "Describe Header Image Above",
+          "default": "Small image"
+        },
+        {
+          "type": "text",
+          "id": "benefits_heading",
+          "label": "Benefits Heading",
+          "default": "Easy to Clean"
+        },
+        {
+          "type": "text",
+          "id": "benefits_text",
+          "label": "Benefits Text",
+          "default": "Non-stick surface lasts 100 bakes"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Benefits Slider",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+
+  ]
+}
+{% endschema %}

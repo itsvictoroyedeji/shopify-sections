@@ -1,0 +1,266 @@
+<!-- video-slider -->
+
+<script src="{{ 'flickity.pkgd.min.js' | asset_url }}" defer></script>
+<link rel="stylesheet" href="{{ 'flickity.css' | asset_url }}">
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+      padding-top: 45px;
+      padding-bottom: 63px;
+  }
+
+  @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+          padding-top: 60px;
+          padding-bottom: 84px;
+      }
+  }
+  @media screen and (max-width: 768px) {
+      .section-{{ section.id }}-padding {
+          padding-top: 48px;
+          padding-bottom: 72px;
+      }
+  }
+{%- endstyle -%}
+
+<div class="meet-our-fans color-{{ section.settings.color_scheme }} flickity-section-{{ section.id }} isolate gradient flickity-index-slider section-{{ section.id }}-padding">
+  <div class="page-width title-btn-and-description-meet-our-fans ">
+    <div class="title-description-meet-our-fans">
+      {% if section.settings.header_image %}
+        {{
+          section.settings.header_image
+          | image_url: width: 1500, height: 267
+          | image_tag:
+            alt: 'First image',
+            loading: 'lazy',
+            sizes: '(min-width: 1400px) 1300px, (min-width: 750px) calc((100vw - 130px) / 1), calc((100vw - 50px) / 1)'
+        }}
+      {% endif %}
+
+      <p>{{ section.settings.header_paragraph }}</p>
+      <h2 class="title-meet-our-fans-h2 h0">{{ section.settings.header_title }}</h2>
+    </div>
+  </div>
+
+  <!-- UGC Video Slider -->
+  <div
+    class="flickity-section__carousel carousel-{{ section.id }} text-center"
+    data-flickity='
+      {
+         "cellAlign": "center",
+         "pageDots": true,
+         "freeScroll": false,
+         "autoPlay": 3000,
+         "contain": true,
+         "draggable": true,
+         "wrapAround": true
+      }
+    '
+  >
+    {% for block in section.blocks %}
+      <div class="carousel__cell meet-our-fans-car-cell" style="width: 20%">
+        {% if block.settings.video_url %}
+          <div class="img-title-btn">
+            <div class="img-main-meet-our-fans">
+              {% if block.settings.video_autoplay %}
+                {{
+                  block.settings.video_url
+                  | video_tag:
+                    class: 'videoplaying',
+                    playsinline: true,
+                    muted: true,
+                    preload: 'metadata',
+                    loop: true,
+                    autoplay: true
+                }}
+              {% else %}
+                {{
+                  block.settings.video_url
+                  | video_tag: class: 'videoplaying', playsinline: true, muted: true, preload: 'metadata', loop: true
+                }}
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if block.settings.image %}
+          <div class="img-title-btn-2">
+            <div class="img-main-meet-our-fans-2">
+              {{
+                block.settings.image
+                | image_url: width: 400, height: 950
+                | image_tag:
+                  class: 'videoplaying',
+                  loading: 'lazy',
+                  sizes: '(min-width: 1400px) 1300px, (min-width: 750px) calc((100vw - 130px) / 1), calc((100vw - 50px) / 1)'
+              }}
+            </div>
+          </div>
+        {% endif %}
+        <h2></h2>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% for block in section.blocks %}
+    {% if block.settings.video_url %}
+      <!-- Video Wrapper Slider -->
+      <div class="video-wrapper-slider">
+        <div class="video-wrapper-slider-inner">
+          {{
+            block.settings.video_url
+            | video_tag: playsinline: true, class: 'popupp', controls: true, preload: 'metadata', loop: true
+          }}
+
+          <div class="video-class-removed">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+              class="icon icon-close closeburger"
+              fill="none"
+              viewBox="0 0 18 17"
+            >
+              <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <!-- Image wrappers -->
+    {% endif %}
+  {% endfor %}
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const imgTitleBtns = document.querySelectorAll('.img-title-btn');
+      const videoWrappers = document.querySelectorAll('.video-wrapper-slider');
+      const videoClassRemoved = document.querySelectorAll('.video-class-removed');
+      const videos = document.querySelectorAll('.video-wrapper-slider video');
+
+
+      imgTitleBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          videoWrappers[index].classList.add('activated_VIDEO');
+          document.body.classList.add('body-activated_VIDEO');
+
+          // Play video from the start
+          const video = videos[index];
+          if (video) {
+              video.currentTime = 0; // Reset video to start
+              video.play(); // Play the video
+          }
+      });
+  });
+
+
+    videoClassRemoved.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+          videoWrappers[index].classList.remove('activated_VIDEO');
+          document.body.classList.remove('body-activated_VIDEO');
+
+          // Pause the video
+          const video = videos[index];
+          if (video) {
+              video.pause(); // Pause the video
+          }
+        });
+      });
+
+
+    });
+</script>
+
+{% schema %}
+{
+  "name": "UGC Slider",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_image",
+      "label": "Header Image",
+    },
+    {
+      "type": "text",
+      "id": "header_paragraph",
+      "label": "Header Paragraph",
+      "default": "Over 250,000 [Your Product] Worldwide"
+    },
+    {
+      "type": "text",
+      "id": "header_title",
+      "label": "Header Title",
+      "default": "Meet Our Fans"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "video",
+          "id": "video_url",
+          "label": "Upload Video"
+        },
+        {
+          "type": "checkbox",
+          "id": "video_autoplay",
+          "label": "Autoplay Video",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 6,
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Upload Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "UGC Slider",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "video"
+        },
+        {
+          "type": "video"
+        },
+        {
+          "type": "video"
+        },
+        {
+          "type": "video"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
