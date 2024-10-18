@@ -1,3 +1,8 @@
+/* 
+   Add {{ 'mobile.css' | asset_url | stylesheet_tag }} to theme.liquid for this to work.
+   Preferably under base.css (use control+f to find it)
+*/
+
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .main-fan-variant-grid .single--fan-variant-grid:nth-child(2) img {
     height: 383px;
