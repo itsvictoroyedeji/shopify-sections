@@ -5,29 +5,29 @@ I created several custom sections to enhance my Shopify stores. So I decided to 
 
 ## To use
 
-In Shopify, create 4 files: `flickity.css`, `flickity.pkgd.min.js`, `custom.css`, and `mobile.css` under the `Assets` folder in Shopify.
+1.In Shopify, create 4 files: `flickity.css`, `flickity.pkgd.min.js`, `custom.css`, and `mobile.css` under the `Assets` folder in Shopify.
 
-(Optionally, you can create a 5th file: `newfonts.css` if you want to add custom fonts using `@font-face`).
+> Optionally, you can create a 5th file: `newfonts.css` if you want to add custom fonts using `@font-face`.
 
-Then copy the codes here (from the same filenames) and paste into Shopify. e.g: `assets/flickty.css`, `assets/flickity.pkgd.min.js`, etc.
+2. In our repository, go to the `css` folder.
+3. Copy each code there (`flickity.css`, etc) and paste into Shopify. e.g: `assets/flickty.css`, etc.
+4. In our repository, in the root folder look for `flickity.pkgd.min.js`. Copy the code there and paste into Shopify. e.g.: `assets/floflickity.pkgd.min.js`
 
 ## After that...
 
-- To add the liquid files, create a new liquid file in your Shopify code editor under `Sections` using the same name we have here (e.g. `benefits-slider`). Make sure you choose `liquid` as the file type.
+It's time to add your liquid sections. Here's how to do it:
+1. In Shopify's code editor,create a new liquid file in your Shopify code editor. Go into the `Sections` folder and create a new section.
+2. Name the section the same name from our `sections` folder.(e.g. `gallery-tabs`). Make sure you choose `liquid` as the file type.
+3. Copy and paste the code in our liquid file to your new liquid file in Shopify (e.g. `sections/gallery-tabs.liquid`)
+4. Repeat the last 3 steps for all the liquid files (aka sections) you want to add. I'll describe what each liquid file does later on.
 
-- Copy and paste the code in my liquid file to your new liquid file in Shopify (e.g. `sections/benefit-slider.liquid`) 
+> Note: As of this writing, only `flickity-ugc-slider.liquid` and `gallery-tabs.css` work properly. We need to update our `.css` files for all the other sections, which we'll complete very soon!
 
-- Repeat the same steps for the rest of the liquid files you want to add. I'll describe what each liquid file does later on.
-
-(Or you can test it out and find out yourself!)
-
-```
-For `video.liquid`, the files are already in Shopify. Simply copy and paste my code to replace the Shopify code already there.
-```
+> Also: For `video.liquid`, the files are already in Shopify. Simply copy and paste our code to replace the Shopify code already there.
 
 ## How to use these custom sections
 
-Access the new sections using your theme editor, located in your `Customizer` in Shopify. Simply add a new section like you would normally add any other section in Shopify.
+Simply access the new sections using your theme editor, located in your `Customizer` in Shopify. Add a new section like you would normally add any other section in Shopify...
 
 And you're good to go!
 
