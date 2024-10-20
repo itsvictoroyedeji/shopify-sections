@@ -5,7 +5,7 @@ I created several custom sections to enhance my Shopify stores. So I decided to 
 
 ## To use
 
-1.In Shopify, create 4 files: `flickity.css`, `flickity.pkgd.min.js`, `custom.css`, and `mobile.css` under the `Assets` folder in Shopify.
+1. In Shopify, create 4 files: `flickity.css`, `flickity.pkgd.min.js`, `custom.css`, and `mobile.css` under the `Assets` folder in Shopify.
 
 > Optionally, you can create a 5th file: `newfonts.css` if you want to add custom fonts using `@font-face`.
 
@@ -36,3 +36,5 @@ And you're good to go!
 I tested these new liquid sections using the free `Dawn` theme in Shopify. I'm not sure if they are compatible with any other free Shopify theme. 
 
 You can always test it out to find out.
+
+- Victor
