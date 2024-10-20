@@ -37,4 +37,4 @@ I tested these new liquid sections using the free `Dawn` theme in Shopify. I'm n
 
 You can always test it out to find out.
 
-- Victor
+~ Victor
