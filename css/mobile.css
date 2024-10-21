@@ -50,12 +50,8 @@
 
 /* Flickity UGC Slider */
 
-@media only screen and (max-width:750px) {
-  .flickity-slider .carousel__cell:nth-child(1){display:none;}
-}
-
-@media only screen and (max-width:500px) {
-  .flickity-page-dots .dot {
-    background: #fff!important;
-}
+@media only screen and (max-width: 750px) {
+  .flickity-slider .carousel__cell:nth-child(1) {
+    display: none;
+  }
 }

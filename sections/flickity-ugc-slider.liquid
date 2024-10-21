@@ -38,7 +38,9 @@
       {% endif %}
 
       <p>{{ section.settings.header_paragraph }}</p>
-      <h2 class="title-meet-our-fans-h2 h0">{{ section.settings.header_title }}</h2>
+      <h2 class="title-meet-our-fans-h2 rich-text__heading inline-richtext {{ section.settings.header_title_size }}">
+        {{ section.settings.header_title }}
+      </h2>
     </div>
   </div>
 
@@ -192,10 +194,34 @@
       "default": "Over 250,000 [Your Product] Worldwide"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "header_title",
       "label": "Header Title",
       "default": "Meet Our Fans"
+    },
+    {
+      "type": "select",
+      "id": "header_title_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
     },
     {
       "type": "color_scheme",
