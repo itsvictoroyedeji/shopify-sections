@@ -1,6 +1,4 @@
 <!-- video-slider -->
-
-<script src="{{ 'flickity.pkgd.min.js' | asset_url }}" defer></script>
 <link rel="stylesheet" href="{{ 'flickity.css' | asset_url }}">
 
 {%- style -%}
@@ -20,6 +18,10 @@
           padding-top: 48px;
           padding-bottom: 72px;
       }
+  }
+  .vid-dont-play p {
+    margin-top: 2.5em;
+    text-align: center;
   }
 {%- endstyle -%}
 
@@ -103,6 +105,9 @@
       </div>
     {% endfor %}
   </div>
+  <div class="vid-dont-play">
+    <p>If videos above do not autoplay, refresh the page.</p>
+  </div>
 
   {% for block in section.blocks %}
     {% if block.settings.video_url %}
@@ -133,6 +138,7 @@
     {% endif %}
   {% endfor %}
 </div>
+<script src="{{ 'flickity.pkgd.min.js' | asset_url }}" defer="defer"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
