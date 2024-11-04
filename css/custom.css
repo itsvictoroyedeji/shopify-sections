@@ -395,6 +395,7 @@ video.videoplaying {
   background: rgba(var(--color-foreground), 0.3) !important;
 }
 .vid-dont-play p {
+  display: none;
   padding: 0 1em;
 }
 
