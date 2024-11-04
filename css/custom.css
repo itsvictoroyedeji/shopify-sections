@@ -2,6 +2,9 @@
   body, * {
       font-family: General Sans!important;
   }
+ * And to prevent videos from stopping after clicking 
+ * product variant: On assets/media-gallery.js, comment this line:
+ * window.pauseAllMedia();
 */
 
 img {
