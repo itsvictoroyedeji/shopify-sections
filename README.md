@@ -11,7 +11,7 @@ I created several custom sections to enhance my Shopify stores. So I decided to 
 
 2. In our repository, go to the `css` folder.
 3. Copy each code there (`flickity.css`, etc) and paste into Shopify. e.g: `assets/flickty.css`, etc.
-4. In our repository, in the root folder look for `flickity.pkgd.min.js`. Copy the code there and paste into Shopify. e.g.: `assets/floflickity.pkgd.min.js`
+4. In our repository, in the root folder look for `flickity.pkgd.min.js`. Copy the code there and paste into Shopify. e.g.: `assets/flickity.pkgd.min.js`
 
 ## After that...
 
