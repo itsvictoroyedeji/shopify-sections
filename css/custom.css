@@ -1,3 +1,8 @@
+/* 
+   Add {{ 'custom.css' | asset_url | stylesheet_tag }} to theme.liquid for this to work.
+   Preferably under the base.css file (control/command +f "base" to find it)
+*/
+
 /* Uncomment if you're using font-face:
   body, * {
       font-family: General Sans!important;

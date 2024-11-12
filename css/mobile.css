@@ -1,6 +1,6 @@
 /* 
    Add {{ 'mobile.css' | asset_url | stylesheet_tag }} to theme.liquid for this to work.
-   Preferably under base.css (use control+f to find it)
+   Preferably under the base.css file (control/command +f "base" to find it)
 */
 
 /* Gallery Tabs */
