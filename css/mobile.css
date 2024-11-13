@@ -1,6 +1,7 @@
 /* 
    Add {{ 'mobile.css' | asset_url | stylesheet_tag }} to theme.liquid for this to work.
-   Preferably under the base.css file (control/command +f "base" to find it)
+   (add it UNDER the "custom.css" for it to work properly)
+   Add it under the base.css file (control/command +f "base" to find it)
 */
 
 /* Gallery Tabs */
@@ -24,7 +25,7 @@
     flex-direction: row !important;
   }
   .plan-controls {
-    /* justify-content: flex-start !important; */
+    justify-content: flex-start !important;
     flex-wrap: nowrap;
   }
   .right-tab-img,
@@ -50,9 +51,58 @@
 
 /* Flickity UGC Slider */
 
-/* @media only screen and (max-width: 750px) {
+@media only screen and (max-width: 750px) {
   .flickity-slider .carousel__cell:nth-child(1) {
     display: none;
   }
 }
-  */
+ 
+
+/* Benefits Slider */
+
+@media only screen and (max-width: 750px) {
+  .page-width.title-btn-and-description-benefits-slider {
+      justify-content: center;
+  }
+  h2.title-benefits-slider-h2, .video-section h2.title.inline-richtext.h0 {
+    font-size: 28px!important;
+  }
+  .benefits___slider .carousel__cell {
+    grid-template-columns: auto!important;
+    display: grid;
+    gap: 0!important;
+    padding: 0;
+  }
+  .benefits-car-cell {
+    width: 49%!important;
+  }
+  .benefits-car-cell img {
+    width: 60px;
+    height: 60px;
+    max-width: 100%;
+    margin: auto;
+  }
+  .benefits-car-cell h2 {
+    margin: 0!important;
+    text-align: center!important;
+  }
+  .benefits-car-cell p {
+    font-size: 14px;
+    text-align: center!important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .benefits_Slider {
+      overflow: hidden;
+  }
+  .benefits_Slider .flickity-button {
+    display: none;
+  }
+   .benefits_Slider .flickity-page-dots {
+    display: block;
+  }
+  .flickity-page-dots .dot {
+    background: #fff!important;
+ }
+}
