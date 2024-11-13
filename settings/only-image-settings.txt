@@ -1,0 +1,3 @@
+Just make sure the image you upload is rectangular. 
+
+It's also best for the background to be the same color as hot-spots.liquid's background. It looks great!

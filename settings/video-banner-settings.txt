@@ -1,0 +1,25 @@
+**Tip: add this as the first block on your homepage.
+
+Main part:
+Video - Upload your video here (no more than 15 sec for best performance)
+URL: leave blank (doesn't fully work yet)
+Check "play video on loop"
+Cover image: Leave blank
+Image overlay: between 0% - 10%
+Banner height: Medium
+Desktop content position: Bottom Left
+Uncheck "Show container on desktop"
+Desktop content alignment: Left
+Color scheme: This is for the main text, which should either be white or black.
+Animations: None
+Mobile layout: Center
+Stack images on logo: Checked
+Show container of mobile: Uncheck
+
+For Heading block:
+Heading Size: Medium
+
+For Text block:
+Text style: Body
+
+For Button label, use the first button. And make sure button matches your brand!

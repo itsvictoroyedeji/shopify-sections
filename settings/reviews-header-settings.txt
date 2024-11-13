@@ -1,0 +1,3 @@
+Header image: 5-stars.svg
+
+Make the background very light. Make sure it matches the background of the reviews app you're about to add underneath.
