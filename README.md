@@ -21,7 +21,7 @@ It's time to add your liquid sections. Here's how to do it:
 3. Copy and paste the code in our liquid file to your new liquid file in Shopify (e.g. `sections/gallery-tabs.liquid`)
 4. Repeat the last 3 steps for all the liquid files (aka sections) you want to add. I'll describe what each liquid file does later on.
 
-> Note: As of this writing, only `flickity-ugc-slider.liquid`, `gallery-tabs.liquid` and `benefits-slider.liquid` (with `assets/Line.png`) work properly. We need to update our `.css` files for all the other sections, which we'll complete very soon!
+> Note: As of this writing, only `flickity-ugc-slider.liquid`, `gallery-tabs.liquid`, `benefits-slider.liquid` (with `assets/Line.png`), `only-image.liquid`, and `hot-spots.liquid` work properly. We need to update our `.css` files for all the other sections, which we'll complete very soon!
 
 > Also: For `video.liquid`, the files are already in Shopify. Simply copy and paste our code to replace the Shopify code already there.
 
