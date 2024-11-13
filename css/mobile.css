@@ -51,11 +51,11 @@
 
 /* Flickity UGC Slider */
 
-@media only screen and (max-width: 750px) {
+/* @media only screen and (max-width: 750px) {
   .flickity-slider .carousel__cell:nth-child(1) {
     display: none;
   }
-}
+} */
  
 
 /* Benefits Slider */
@@ -190,4 +190,6 @@
   .home-cstm-hero .banner__box {
     padding-top: 0!important;
   }
+  
 }
+
