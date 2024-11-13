@@ -37,6 +37,8 @@ It's time to add your liquid sections. Here's how to do it:
 
 Simply access the new sections using your theme editor, located in your `Customizer` in Shopify. Add a new section like you would normally add any other section in Shopify...
 
+> To properly use them, get the setting for each slider under the `settings` folder here.
+
 And you're good to go!
 
 ## Final note
