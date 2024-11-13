@@ -153,3 +153,41 @@
     font-size: 28px!important;
   }
 }
+
+/* Video-banner */
+
+@media only screen and (max-width: 750px) {
+  .index .banner--medium:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+    min-height: 65rem!important;
+  }
+  .home-cstm-hero .banner__content {
+    padding: 0!important;
+  }
+  .index .banner:not(.banner--mobile-bottom):not(.email-signup-banner) .banner__box {
+    bottom: 20px!important;
+    position: absolute!important;
+  }
+  .index .banner:not(.banner--mobile-bottom):not(.email-signup-banner) .banner__box {
+    color: rgba(var(--color-foreground),.95);
+  }
+  .home-cstm-hero .banner__box {
+    padding: 20px!important;
+    text-align: center;
+  }
+  .home-cstm-hero h2.banner__heading.inline-richtext.h1 {
+    color: rgba(var(--color-foreground),1);
+    font-weight: 600;
+  }
+  .home-cstm-hero h2.banner__heading.inline-richtext.h1 {
+    padding: 0;
+  }
+  .btn-benefit-wrapper {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-cstm-hero .banner__box {
+    padding-top: 0!important;
+  }
+}

@@ -29,6 +29,7 @@ It's time to add your liquid sections. Here's how to do it:
 
 6. The file `multicolumn.liquid`, simply follow the directions in that file. 3 assets are also added for that file: `warranty.svg`, `guarantee.svg`, and `support.svg`. Add these files to your Shopify `Files` section add them as images in your multicolumn section.
 
+7. The file `assets/right-button-arrow.png` is for the button url at `video-banner.liquid`. Upload the file on Shopify to use it.
 
 > Also: For `video.liquid`, the files are already in Shopify. Simply copy and paste our code to replace the Shopify code already there.
 
