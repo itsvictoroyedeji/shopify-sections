@@ -641,4 +641,9 @@ p.mobile-content,
   }
 }
 
+/* Only Image */
 
+.header__heading-logo {
+    height: auto;
+    max-width: 100%;
+}
