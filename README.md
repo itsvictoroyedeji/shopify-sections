@@ -10,7 +10,7 @@ I created several custom sections to enhance my Shopify stores. So I decided to 
 > Optionally, you can create a 5th file: `newfonts.css` if you want to add custom fonts using `@font-face`.
 
 2. In our repository, go to the `css` folder.
-3. Copy each code there (`flickity.css`, etc) and paste into Shopify. e.g: `assets/flickty.css`, etc.
+3. Copy each code there (`flickity.css`, etc) and paste into Shopify. e.g: `assets/flickity.css`, etc.
 4. In our repository, in the root folder look for `flickity.pkgd.min.js`. Copy the code there and paste into Shopify. e.g.: `assets/flickity.pkgd.min.js`
 
 ## After that...
@@ -20,6 +20,7 @@ It's time to add your liquid sections. Here's how to do it:
 2. Name the section the same name from our `sections` folder (e.g. `gallery-tabs`). Make sure you choose `liquid` as the file type.
 3. Copy and paste the code in our liquid file to your new liquid file in Shopify (e.g. `sections/gallery-tabs.liquid`)
 4. Repeat the last 3 steps for all the liquid files (aka sections) you want to add. I'll describe what each liquid file does later on.
+Note: The file `assets/Line.png` for `benefits-slider.liquid`. The file `assets/5-stars.svg` is for both `flickity-ugc-slider.liquid` and `reviews-header.liquid`. Upload both files from the `assets` folder into the `Files` section in Shopify to use them.
 
 
 > Also: For `video.liquid`, the files are already in Shopify. Simply copy and paste our code to replace the Shopify code already there.

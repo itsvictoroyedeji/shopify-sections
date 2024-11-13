@@ -145,3 +145,11 @@
     border-radius: 0!important;
   }
 }
+
+/* Review header */
+
+@media only screen and (max-width: 750px) {
+  .headingbigwidget {
+    font-size: 28px!important;
+  }
+}

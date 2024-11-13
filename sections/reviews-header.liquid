@@ -1,0 +1,129 @@
+<!-- Reviews header -->
+{%- style -%}
+  .section-{{ section.id }}-padding {
+      padding-top: 27px;
+      padding-bottom: 0px;
+      /* background-color: #ffffff; */
+  }
+
+  @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+          padding-top: 36px;
+          padding-bottom: 0px;
+      }
+  }
+  @media screen and (max-width: 768px) {
+      .section-{{ section.id }}-padding {
+          padding-top: 36px;
+          padding-bottom: 0px;
+      }
+  }
+{%- endstyle -%}
+
+{%- style -%}
+  img.stars-widget-slider {
+      width: 170px;
+  }
+  .topcontent-widget {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .smallheading-widget {
+      color: rgb(var(--color-foreground), 0.75);
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-align: center;
+      margin: 15px 0 0;
+  }
+  .headingbigwidget {
+      color: rgb(var(--color-foreground));
+      font-size: 45px;
+      font-weight: 600;
+      line-height: 55px;
+      text-align: center;
+      width: 55%;
+      margin: auto;
+        margin-bottom: 35px;
+  }
+
+  @media(max-width:1025px){
+    .headingbigwidget {
+      font-size: 40px;
+      line-height: 48px;
+      width: 71%;
+    }
+  }
+  @media(max-width:768px){
+    .headingbigwidget {
+      font-size: 34px;
+      line-height: 40px;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding reviews-header color-{{ section.settings.color_scheme }}">
+  <div class="page-width">
+    <div class="topcontent-widget">
+      {% if section.settings.header_image %}
+        {{
+          section.settings.header_image
+          | image_url: width: 1500, height: 267
+          | image_tag:
+            alt: 'stars image',
+            loading: 'lazy',
+            class: 'stars-widget-slider',
+            title: 'Stars',
+            sizes: '(min-width: 1400px) 1300px, (min-width: 750px) calc((100vw - 130px) / 1), calc((100vw - 50px) / 1)'
+        }}
+      {% endif %}
+
+      <div class="smallheading-widget">{{ section.settings.review_title }}</div>
+      <div class="headingbigwidget">{{ section.settings.review }}</div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Reviews Header",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_image",
+      "label": "Header Image",
+    },
+    {
+      "type": "text",
+      "id": "review_title",
+      "label": "Review Title",
+      "default": "THOUSANDS 4.7+ RATED REVIEWS"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "review",
+      "label": "Sample Review",
+      "default": "\"Add a customer's review here\""
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews Header",
+      "category": "Custom",
+    }
+  ]
+}
+{% endschema %}
