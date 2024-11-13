@@ -16,12 +16,11 @@ I created several custom sections to enhance my Shopify stores. So I decided to 
 ## After that...
 
 It's time to add your liquid sections. Here's how to do it:
-1. In Shopify's code editor,create a new liquid file in your Shopify code editor. Go into the `Sections` folder and create a new section.
+1. In Shopify's code editor, create a new liquid file in your Shopify code editor. Go into the `Sections` folder and create a new section.
 2. Name the section the same name from our `sections` folder (e.g. `gallery-tabs`). Make sure you choose `liquid` as the file type.
 3. Copy and paste the code in our liquid file to your new liquid file in Shopify (e.g. `sections/gallery-tabs.liquid`)
 4. Repeat the last 3 steps for all the liquid files (aka sections) you want to add. I'll describe what each liquid file does later on.
 
-> Note: As of this writing, only `flickity-ugc-slider.liquid`, `gallery-tabs.liquid`, `benefits-slider.liquid` (with `assets/Line.png`), `only-image.liquid`, and `hot-spots.liquid` work properly. We need to update our `.css` files for all the other sections, which we'll complete very soon!
 
 > Also: For `video.liquid`, the files are already in Shopify. Simply copy and paste our code to replace the Shopify code already there.
 
