@@ -209,9 +209,9 @@ img {
 }
 .title-description-meet-our-fans h2 {
   /*color: rgba(255, 255, 255, 1);*/
-  /*font-size: 50px;*/
-  font-weight: 500;
-  margin-top: 7px;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 0px;
 }
 h2.title-meet-our-fans-h2 {
   margin-bottom: 30px;
@@ -437,6 +437,15 @@ video.videoplaying {
   .img-title-btn h2,
   .img-title-btn-2 h2{
     font-size: 23px;
+  }
+  .title-description-meet-our-fans img {
+    width: 177px;
+  }
+  .title-description-meet-our-fans p {
+    font-size: 19px;
+  }
+  .title-description-meet-our-fans h2 {
+    font-size: 38px;
   }
 }
 
