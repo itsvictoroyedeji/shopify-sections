@@ -32,12 +32,12 @@
     margin-block-start: calc(-1 * var(--header-height) * var(--section-is-first));
   }
 
-  .hero-section-main {
+  /* .hero-section-main {
     background: linear-gradient(180deg, #eaebf0 0%, #ecedf1 47%, #fff 100%);
   }
   .media {
     background: transparent;
-  }
+  } */
 {%- endstyle -%}
 
 {%- liquid
@@ -91,7 +91,14 @@
           class: image_class,
           sizes: sizes,
           widths: widths,
+          alt: 'Silky Mat banner',
           fetchpriority: fetch_priority
+      }}
+      {{
+        section.settings.image_3
+        | image_url: width: auto
+        | image_tag:
+          class: 'mob-banner-img first-mobile-image'
       }}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
@@ -142,9 +149,27 @@
             <div class="banner__text rte subtitle" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
             </div>
+          {%- when 'image' -%}
+            <div class="brands-imgs desktop-only-imgs">
+              {%- if block.settings.image_logo != blank -%}
+                {{ block.settings.image_logo | image_url: width: auto | image_tag: alt: block.settings.image_logo_alt_1 }}
+              {%- endif -%}
+              {%- if block.settings.image_logo_2 != blank -%}
+                {{ block.settings.image_logo_2 | image_url: width: auto | image_tag: alt: block.settings.image_logo_alt_2 }}
+              {%- endif -%}
+              {%- if block.settings.image_logo_3 != blank -%}
+                {{ block.settings.image_logo_3 | image_url: width: auto | image_tag: alt: block.settings.image_logo_alt_3 }}
+              {%- endif -%}
+              {%- if block.settings.image_logo_4 != blank -%}
+                {{ block.settings.image_logo_4 | image_url: width: auto | image_tag: alt: block.settings.image_logo_alt_4 }}
+              {%- endif -%}
+              {%- if block.settings.image_logo_5 != blank -%}
+                {{ block.settings.image_logo_5 | image_url: width: auto | image_tag: alt: block.settings.image_logo_alt_5 }}
+              {%- endif -%}
+            </div>
           {%- when 'buttons' -%}
             <div
-              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+              class="banner__buttons {% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.button_label_1 != blank -%}
@@ -154,7 +179,7 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
-                  class="btn-benefit-wrapper button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="btn-benefit-wrapper color-{{ block.settings.color_scheme_button }} {% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_1 | escape -}}
                   <span>
@@ -184,15 +209,38 @@
     </div>
   </div>
 </div>
-<div class="page-width brands-imgs mob-only-imgs">
-  <!--
-    <img src="//www.ventyfan.com/cdn/shop/files/As_seen_On_7d1f7b6c-d6ef-45c4-9d6c-1f42235195a1.png?v=1724263282" alt="" width="auto" height="auto">
-    <img src="//www.ventyfan.com/cdn/shop/files/good_1.svg?v=1723914144" alt="" width="auto" height="auto">
-    <img src="//www.ventyfan.com/cdn/shop/files/Gizmodo.svg?v=1708837157" alt="" width="auto" height="auto">
-    <img src="//www.ventyfan.com/cdn/shop/files/Kickstarter_logo_1.svg?v=1723914182" alt=""width="auto" height="auto" >
-    <img src="//www.ventyfan.com/cdn/shop/files/NBC_logo_1.svg?v=1723914226" alt="" width="auto" height="auto">
-  -->
-</div>
+
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'image' -%}
+      <div class="page-width brands-imgs mob-only-imgs">
+        {%- if block.settings.image_logo != blank -%}
+          {{ block.settings.image_logo | image_url: width: auto | image_tag: alt: block.settings.image_logo_alt_1 }}
+        {%- endif -%}
+        {%- if block.settings.image_logo_2 != blank -%}
+          {{ block.settings.image_logo_2 | image_url: width: auto | image_tag: alt: block.settings.image_logo_alt_2 }}
+        {%- endif -%}
+        {%- if block.settings.image_logo_3 != blank -%}
+          {{ block.settings.image_logo_3 | image_url: width: auto | image_tag: alt: block.settings.image_logo_alt_3 }}
+        {%- endif -%}
+        {%- if block.settings.image_logo_4 != blank -%}
+          {{ block.settings.image_logo_4 | image_url: width: auto | image_tag: alt: block.settings.image_logo_alt_4 }}
+        {%- endif -%}
+        {%- if block.settings.image_logo_5 != blank -%}
+          {{ block.settings.image_logo_5 | image_url: width: auto | image_tag: alt: block.settings.image_logo_alt_5 }}
+        {%- endif -%}
+      </div>
+  {%- endcase -%}
+{%- endfor -%}
+
+<style>
+  #shopify-section-{{ section.id }} .hero-section-main {
+     background: linear-gradient(180deg, #eaebf0 0%, #ecedf1 47%, #fff 100%);
+   } 
+  #shopify-section-{{ section.id }} .media {
+    background: transparent;
+  } 
+</style>
 
 {% schema %}
 {
@@ -207,6 +255,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-banner.settings.image.label",
+      "info": "Use a TRANSPARENT Square image for best results."
+    },
+     {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Mobile image version (required)",
       "info": "Use a TRANSPARENT Square image for best results."
     },
     {
@@ -407,7 +461,7 @@
         {
           "type": "inline_richtext",
           "id": "heading",
-          "default": "Thing That Fits In Your Bag",
+          "default": "[Product] That Fits In Your Bag",
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
         }
       ]
@@ -451,6 +505,74 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        },
+        {
+      "type": "color_scheme",
+      "id": "color_scheme_button",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Logo Images",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_logo",
+          "label": "Transprent Logo 1",
+          "info": "Doesn't display on mobile devices. Add \"As seen on\" logo here"
+        },
+        {
+          "type": "text",
+          "id": "image_logo_alt_1",
+          "label": "Logo 1 alt text",
+          "info": "Used for screen readers"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_logo_2",
+          "label": "Transprent Logo 2"
+        },
+        {
+          "type": "text",
+          "id": "image_logo_alt_2",
+          "label": "Logo 2 alt text ",
+          "info": "Used for screen readers"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_logo_3",
+          "label": "Transprent Logo 3"
+        },
+        {
+          "type": "text",
+          "id": "image_logo_alt_3",
+          "label": "Logo 3 alt text ",
+          "info": "Used for screen readers"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_logo_4",
+          "label": "Transprent Logo 4"
+        },
+        {
+          "type": "text",
+          "id": "image_logo_alt_4",
+          "label": "Logo 4 alt text ",
+          "info": "Used for screen readers"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_logo_5",
+          "label": "Transprent Logo 5"
+        },
+        {
+          "type": "text",
+          "id": "image_logo_alt_5",
+          "label": "Logo 5 alt text ",
+          "info": "Used for screen readers"
         }
       ]
     }
@@ -464,6 +586,9 @@
         },
         {
           "type": "heading"
+        },
+        {
+          "type": "image"
         },
         {
           "type": "buttons"

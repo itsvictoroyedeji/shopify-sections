@@ -31,6 +31,8 @@ It's time to add your liquid sections. Here's how to do it:
 
 7. The file `assets/right-button-arrow.png` is for the button url at `video-banner.liquid`. Upload the file on Shopify to use it.
 
+8. The file `assets/small_benefit_arrow.png` is for the button at url `sections/image-banner-top.liquid`. Upload the file on Shopify to use it.
+
 > Also: For `video.liquid`, the files are already in Shopify. Simply copy and paste our code to replace the Shopify code already there.
 
 ## How to use these custom sections

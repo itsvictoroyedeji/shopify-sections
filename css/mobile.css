@@ -190,6 +190,57 @@
   .home-cstm-hero .banner__box {
     padding-top: 0!important;
   }
-  
 }
 
+/* Image-top Banner */
+
+@media only screen and (max-width: 1024px) {
+  .hero-section-main .banner__media.media img {
+    display: none;
+  }
+  .hero-section-main .banner__media img.mob-banner-img {
+    display: block!important;
+  }
+  .brands-imgs {
+    width: 65%;
+    margin-top: 23px!important;
+    gap: 14px 13px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .brands-imgs {
+    width: 100%;
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .hero-section-main .banner__media img.mob-banner-img {
+    margin: auto;
+    object-position: center;
+  }
+  .hero-section-main.banner--content-align-left .banner__box {
+    text-align: center;
+  }
+  .hero-section-main .banner__text.rte.subtitle {
+    font-size: 28px;
+  }
+  .hero-section-main h2.banner__heading.inline-richtext.h0 {
+    font-size: 51px;
+    padding-right: 0!important;
+    text-align: center;
+  }
+  .brands-imgs img:nth-child(1) {
+    display: none!important;
+  }
+  .brands-imgs img {
+    width: 19%!important;
+  }
+  .hero-section-main .banner__buttons {
+    display: block;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+  }
+}

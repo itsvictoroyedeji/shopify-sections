@@ -1,0 +1,20 @@
+First, add to very top of Product Page of MAIN product(s) you're selling. Even above the Product Information section.
+
+Now for the main settings:
+Add both images. You can use the same for the 2nd (mobile) image, but you must have that 2nd image or it won't display on mobile devices!
+Image overlay: 0%
+Banner height: Large 
+Desktop content position: Middle left
+Uncheck "Show container on desktop"
+Desktop alignment: left
+Color scheme: Chose one with a very light background with dark text. Preferably "Scheme 1"
+Image behavior: none
+Mobile content alignment: center
+Uncheck "Stack images on mobile"
+Check "Show container on mobile"
+And in the "Theme Settings" section, uncheck "Reveal sections on scroll"
+
+For the blocks, you can remove the Logo images if you want. But if you do, add "padding: 2rem" to this in "assets/mobile.css":
+.hero-section-main .banner__buttons
+
+And for Buttons, only use the First button label. Uncheck "use outline button" and use a color scheme that matches your brand.
