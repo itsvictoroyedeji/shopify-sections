@@ -40,7 +40,10 @@
       {% endif %}
 
       <p>{{ section.settings.header_paragraph }}</p>
-      <h2 class="title-meet-our-fans-h2 rich-text__heading inline-richtext {{ section.settings.header_title_size }}">
+      {{% comment %}}
+      Make size large in Customizer to reflect text size below:
+      {{% endcomment %}}
+      <h2 class="title-meet-our-fans-h2 {{ section.settings.header_title_size }}">
         {{ section.settings.header_title }}
       </h2>
     </div>
@@ -200,7 +203,7 @@
       "default": "Over 250,000 [Your Product] Worldwide"
     },
     {
-      "type": "inline_richtext",
+      "type": "text",
       "id": "header_title",
       "label": "Header Title",
       "default": "Meet Our Fans"
