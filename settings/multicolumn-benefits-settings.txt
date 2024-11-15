@@ -1,0 +1,28 @@
+Heading size: Extra large
+Image width: 1/3 width
+Image ration: Adapt to image
+Number of columns on desktop: 3
+Column alignment: Center
+Secondary background: None
+Remove text in button label
+Make sure color scheme matches your brand and footer
+Number of mobile columns: 1 column
+
+
+And for each column, make the "Heading" bold.
+
+Here's what you can add for each column block:
+
+image: warranty.svg
+1 Year Warranty
+We stand behind our VENTY and will make sure you are covered from any manufacture defect. Opt in for 1 year during check out.
+
+image: guarantee.svg
+30 Day Money Back Guarantee
+Not what you wanted? Send it back within 30 days for a full product refund.
+
+image: support.svg
+Excellent Support
+Contact our live chat during business hours or contact us at [your support email]
+
+**Pro tip: put this at the bottom of your product pages and homepage, and make the background the same color as your footer.
