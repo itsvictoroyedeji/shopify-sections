@@ -109,13 +109,13 @@ And it should be __in that order__, or your CSS won't 100% work correctly.
 
 ## Here's a quicker version to add all power-ups quickly...
 
-> Go back to the Shopify code editor tab (which should already be open), and under `snippets`, click `+ Add a new snippet`. Then add the next power-up you want, starting from the top of the list under our `sections` folder (`benefits-slider`). Type that in and click `Done`.
+1. Go back to the Shopify code editor tab (which should already be open), and under `snippets`, click `+ Add a new snippet`. Then add the next power-up you want, starting from the top of the list under our `sections` folder (`benefits-slider`). Type that in and click `Done`.
 
-> Then click `+ Add a new snippet` once again under the `snippets` folder, and add the next file under our `sections` folder (`flickity-ugc-slider`). Type that in and click "Done". Then click that file in our `sections` folder in our repository and copy it. 
+2. Click `+ Add a new snippet` once again under the `snippets` folder, and add the next file under our `sections` folder (`flickity-ugc-slider`). Type that in and click "Done". Then click that file in our `sections` folder in our repository and copy it. 
 
-> Go back to the Shopify code editor and paste the code under the right tab (in this case: under `snippet/flickity-ugc-slider.liquid`) and click "Save".
+3. Go back to the Shopify code editor and paste the code under the right tab (in this case: under `snippet/flickity-ugc-slider.liquid`) and click "Save".
 
-> Then click `+ Add a new snippet` once again under the `snippets` folder and repeat for the rest of the powerups in our `sections` folder in our repository.
+4. Click `+ Add a new snippet` once again under the `snippets` folder and repeat for the rest of the powerups in our `sections` folder in our repository.
 
 > And don't forget to look at the correct settings for each power-up in our `settings` folder.
 
