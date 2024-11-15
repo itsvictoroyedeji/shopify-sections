@@ -1,6 +1,6 @@
 Make sure the background is the same as only-image.liquid, because it looks good.
 
-To move the dots, in hot-spots.liquid ctr+f this:
+To move the dots, in "sections/hot-spots.liquid" ctrl + f (or command + f) this:
 --hot-spot-horizontal-position-desktop
 
 You'll 6 settings for each dot. The first group of settings is for the first dot, the 2nd group is for the 2nd dot, and so on. Adjust the percentages accordingly.

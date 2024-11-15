@@ -1,3 +1,5 @@
-1. Add assets/5-stars.svg as Header image
+After clicking "Flickity UGC Slider":
+
+1. Add assets/5-stars.svg as Header image (located in our "Assets" folder. Simply upload that to the "Files" section in the Shopify admin section).
 2. Heading size: Medium
 3. Color Scheme: Match your brand

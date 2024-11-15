@@ -1,8 +1,8 @@
 Heading size: Large
 Make sure the color scheme matches your background
-Finally, in the "Heading", BOLD the text. And if you italicize a word, it turns blue. 
+Finally, in the "Heading", BOLD the text. And if you italicize a word, it turns blue! 
 
-You can change the color in assets/custom.css. Find this line:
+You can change that italicized color in assets/powerups.css. Find this line:
 .video-section h2.title.inline-richtext em
 
 And change the color to your brand's color.

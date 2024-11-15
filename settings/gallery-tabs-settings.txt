@@ -1,1 +1,4 @@
-Just adjust the color scheme to match your brand.
+Just adjust the color scheme to match your brand. Preferably, you want a darker background color (non-white).
+
+And delete "Categories with Images" blocks you don't want. If not, a button outline will always appear.
+

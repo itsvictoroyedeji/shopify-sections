@@ -1,2 +1,2 @@
 Just adjust the Color scheme to match your brand.
-On both the main settings and on each block settings
+On both the main settings and on each "Text" block settings
