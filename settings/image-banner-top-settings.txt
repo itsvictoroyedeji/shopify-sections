@@ -1,20 +1,28 @@
 First, add to very top of Product Page of MAIN product(s) you're selling. Even above the Product Information section.
 
-Now for the main settings:
-Add both images. You can use the same for the 2nd (mobile) image, but you must have that 2nd image or it won't display on mobile devices!
+Now for the main settings (after clicking on "Image Banner Top"):
+
+Add both images (First image and Mobile image version). Make sure they are transparent for best results! 
+
+Note: You can use the same image for the 2nd (mobile) image, but you MUST have that 2nd image or it won't display on mobile devices! Test to see how it looks in mobile view *after completing these settings.
+
 Image overlay: 0%
 Banner height: Large 
 Desktop content position: Middle left
 Uncheck "Show container on desktop"
-Desktop alignment: left
+Desktop content alignment: Left
 Color scheme: Chose one with a very light background with dark text. Preferably "Scheme 1"
 Image behavior: none
 Mobile content alignment: center
 Uncheck "Stack images on mobile"
 Check "Show container on mobile"
-And in the "Theme Settings" section, uncheck "Reveal sections on scroll"
+And in the "Theme Settings" section, uncheck "Reveal sections on scroll" (if you want).
 
-For the blocks, you can remove the Logo images if you want. But if you do, add "padding: 2rem" to this in "assets/mobile.css":
-.hero-section-main .banner__buttons
+For the "Logo Images", you can remove the Logo images block if you want. But if you do, go to "assets/powerups-mobile.css" in your Shopify code editor. Then search: .hero-section-main .banner__buttons
 
-And for Buttons, only use the First button label. Uncheck "use outline button" and use a color scheme that matches your brand.
+Once you do, add this declaration within that css block of code: padding: 2rem;
+
+And for Buttons, only use the First button label. 
+Uncheck "use outline button", and use a color scheme that matches your brand. (Note: button only shows up in mobile view).
+
+Click "Save" to save your changes. And that's it. Don't forget to change our preset text with your own!
