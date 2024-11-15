@@ -77,6 +77,8 @@ So it should look like this:
 
 ## Now it's time to add your new power-up sections. Here's how to do it:
 
+[(click here to see a quicker version)][2]
+
 1. Figure out [which power-up from above][1] you want to use. In this example we'll add all of them.
 
 2. In Shopify's code editor, under the `sections` folder, click `+ Add a new section`.
@@ -111,15 +113,19 @@ So it should look like this:
 
 ## Here's a quicker version to add all power-ups quickly...
 
-1. Go back to the Shopify code editor tab (which should already be open), and under `snippets`, click `+ Add a new snippet`. Then add the next power-up you want, starting from the top of the list under our [sections](../main/sections) folder (`benefits-slider`). Type that in and click `Done`.
+1. Go back to the Shopify code editor tab (which should already be open), and under `snippets`, click `+ Add a new snippet`. Then add the next power-up you want, starting from the top of the list under our [sections](../main/sections) folder (for example: `benefits-slider`). Type that filename and click `Done`.
 
-2. Click `+ Add a new snippet` once again under the `snippets` folder, and add the next file under our [sections](../main/sections) folder (`flickity-ugc-slider`). Type that in and click "Done". Then click that file in our [sections](../main/sections) folder in our repository and copy it. 
+2. Click `+ Add a new snippet` once again under the `snippets` folder, and add the next file under our [sections](../main/sections) folder (`flickity-ugc-slider`). Type that filename in your Shopify code editor and click `Done`. 
 
-3. Go back to the Shopify code editor and paste the code under the right tab (in this case: under `snippet/flickity-ugc-slider.liquid`) and click "Save".
+3. Repeat step 2 to add the rest of the power-up files in our `sections` folder to your Shopify code editor.
 
-4. Click `+ Add a new snippet` once again under the `snippets` folder and repeat for the rest of the powerups in our [sections](../main/sections) folder in our repository.
+4. Once you're done, go back to each power-up file in our [sections] folder. Click on each file, then copy the code. Paste the code in your code editor under the CORRECT tab, and click `Save` to save your changes.
 
-> And don't forget to look at the correct settings for each power-up in our [settings](../main/settings) folder.
+5. Once you've added all power-ups code, go to your Customizer tab, and Refresh the page. Now you can add your new power-ups under the "Template" section in your Product page!
+
+6. Important: Make sure you follow the settings for each power-up, located in our [settings](../main/settings) folder! This ensures the power-up looks right and works as intended.
+
+> [Go back to the top][1] to see my recommended order your power-ups should appear.
 
 And that's it!
 
@@ -132,3 +138,5 @@ You can always test it out to find out. Other than that, enjoy your new powerups
 ~ Victor
 
 [1]: ../main?tab=readme-ov-file#here-are-the-free-power-up-sections-included-in-the-order-they-would-best-appear-in-a-shopify-product-page
+
+[2]: ../main#heres-a-quicker-version-to-add-all-power-ups-quickly
