@@ -130,4 +130,4 @@ You can always test it out to find out. Other than that, enjoy your new powerups
 
 ~ Victor
 
-[1]: ../tree/main?tab=readme-ov-file#here-are-the-free-power-up-sections-included-in-the-order-they-would-best-appear-in-a-shopify-product-page
+[1]: ../main?tab=readme-ov-file#here-are-the-free-power-up-sections-included-in-the-order-they-would-best-appear-in-a-shopify-product-page
