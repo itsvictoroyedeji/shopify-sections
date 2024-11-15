@@ -35,7 +35,7 @@ I created several "power-ups" sections to enhance your free Shopify themes. I sp
 
 2. Next to your free theme, next to the `Customizer` button, click the 3 dots, and select "Edit code".
 
-3. In the edit code section, under the `assets` folder, click `+ Add a new asset`, click on `Create a blank file` and create 4 files: `flickity.css`, `flickity.pkgd.min.js` (make sure the "Extension for this one is `js`), `powerups.css`, and `powerups-mobile.css`. 
+3. In the edit code section, under the `assets` folder, click `+ Add a new asset`, click on `Create a blank file` and create 4 files (you'll have to do these one-by-one): `flickity.css`, `flickity.pkgd.min.js` (make sure the "Extension for this one is `js`), `powerups.css`, and `powerups-mobile.css`. 
 
 > When adding these, make sure you don't add the actual 'text' extension ("css", "js"), as it's already provided to you by Shopify, as long as your "Extension" is correct.
 
