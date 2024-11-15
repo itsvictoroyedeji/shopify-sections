@@ -70,7 +70,7 @@ So it should look like this:
 > Each code should be on a separate line,
 > and it should be __in that order__, or your CSS won't 100% work correctly.
 
-13. Click "Save" to save your changes.
+13. Click `Save` to save your changes.
 
 > Optionally, you can add `{{ 'newfonts.css' | asset_url | stylesheet_tag }}` under the "powerups-mobile" code if you want to use a custom `@font-face` font.
 
@@ -117,9 +117,9 @@ So it should look like this:
 
 ## Here's a quicker version to add all power-ups quickly...
 
-1. Go back to the Shopify code editor tab (which should already be open), and under `snippets`, click `+ Add a new snippet`. Then add the next power-up you want, starting from the top of the list under our [sections](../main/sections) folder (for example: `benefits-slider`). Type that filename and click `Done`.
+1. Go back to the Shopify code editor tab (which should already be open), and under `sections`, click `+ Add a new section`. Then add the next power-up you want, starting from the top of the list under our [sections](../main/sections) folder (for example: `benefits-slider`). Type that filename and click `Done`.
 
-2. Click `+ Add a new snippet` once again under the `snippets` folder, and add the next file under our [sections](../main/sections) folder (`flickity-ugc-slider`). Type that filename in your Shopify code editor and click `Done`. 
+2. Click `+ Add a new section` once again under the `section` folder, and add the next file under our [sections](../main/sections) folder (`flickity-ugc-slider`). Type that filename in your Shopify code editor and click `Done`. 
 
 3. Repeat step 2 to add the rest of the power-up files in our [sections](../main/sections) folder to your Shopify code editor.
 > Note: ctrl+click (or command+click on a mac) to open the link in a new tab.
