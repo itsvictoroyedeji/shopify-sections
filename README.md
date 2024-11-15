@@ -117,7 +117,8 @@ So it should look like this:
 
 2. Click `+ Add a new snippet` once again under the `snippets` folder, and add the next file under our [sections](../main/sections) folder (`flickity-ugc-slider`). Type that filename in your Shopify code editor and click `Done`. 
 
-3. Repeat step 2 to add the rest of the power-up files in our `sections` folder to your Shopify code editor.
+3. Repeat step 2 to add the rest of the power-up files in our [sections](../main/sections) folder to your Shopify code editor.
+> Note: ctrl+click (or command+click on a mac) to open link in a new tab.
 
 4. Once you're done, go back to each power-up file in our [sections] folder. Click on each file, then copy the code. Paste the code in your code editor under the CORRECT tab, and click `Save` to save your changes.
 
