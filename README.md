@@ -41,13 +41,13 @@ I created several "power-ups" sections to enhance your free Shopify themes. I sp
 
 4. Optionally, you can create a 5th file: `newfonts.css` if you want to add custom fonts using `@font-face`.
 
-5. In our repository, go to the `css` folder.
+5. In our repository, go to the [css](../main/css) folder.
 
 6. Click on the first file: `flickity.css`. Then on the right side, new to "Raw", click on the image that looks like 2 boxes. This copies the raw file.
 
 7. Go back to Shopify and paste it under the `assets/flickity.css` tab. Click Save to save changes.
 
-8. Repeat the previous 2 steps for the following 2 files in the `css` folder: `powerups.css` and `powerups-mobile.css`. (You can optionally do `newfonts.css` if you want to use `@font-face`, which is a custom font either from Google or a 3rd party). Copy each file and paste it in Shopify under the corresponding tab.
+8. Repeat the previous 2 steps for the following 2 files in the [css](../main/sections) folder: `powerups.css` and `powerups-mobile.css`. (You can optionally do `newfonts.css` if you want to use `@font-face`, which is a custom font either from Google or a 3rd party). Copy each file and paste it in Shopify under the corresponding tab.
 
 9. For `flickity.pkgd.min.js`, that is in our root folder in our repository. Copy the code there and paste into Shopify under `assets/flickity.pkgd.min.js`.
 
@@ -80,7 +80,7 @@ So it should look like this:
 
 2. In Shopify's code editor, under the `sections` folder, click `+ Add a new section`.
 
-3. Make sure `liquid` is selected. Then look under our `sections` folder to see which power-up you want to add. (All of our power-ups are located here). For example, if you want the __Image Banner Top__, you'll use the `image-banner-top.liquid` file.
+3. Make sure `liquid` is selected. Then look under our [sections](../main/sections) folder to see which power-up you want to add. (All of our power-ups are located here). For example, if you want the __Image Banner Top__, you'll use the `image-banner-top.liquid` file.
 ⋅⋅* Simply add the file name `image-banner-top` into the textbox in Shopify. Then click "Done".
 
 4. In our repository, click on the power-up (in this case, `image-banner-top.liquid`). The click on the 2 boxes next to "Raw" to copy the raw code.
@@ -99,7 +99,7 @@ So it should look like this:
 
 11. Now you have your power-up. For this one (Image Banner Top), move it to the very top above the "Product Information" to use.
 
-12. Now...it looks weird, right? Good news is there are certain settings needed for this to work. To find those settings, look under the [settings](../main/sections) folder in our repository. In our case, click `image-banner-top-settings.txt` in that settings folder.
+12. Now...it looks weird, right? Good news is there are certain settings needed for this to work. To find those settings, look under the [settings](../main/settings) folder in our repository. In our case, click `image-banner-top-settings.txt` in that settings folder.
 
 13. Follow the settings to know which options to choose. Once the options are right, the design of the power-up will change.
 
@@ -110,15 +110,15 @@ So it should look like this:
 
 ## Here's a quicker version to add all power-ups quickly...
 
-1. Go back to the Shopify code editor tab (which should already be open), and under `snippets`, click `+ Add a new snippet`. Then add the next power-up you want, starting from the top of the list under our `sections` folder (`benefits-slider`). Type that in and click `Done`.
+1. Go back to the Shopify code editor tab (which should already be open), and under `snippets`, click `+ Add a new snippet`. Then add the next power-up you want, starting from the top of the list under our [sections](../main/sections) folder (`benefits-slider`). Type that in and click `Done`.
 
-2. Click `+ Add a new snippet` once again under the `snippets` folder, and add the next file under our `sections` folder (`flickity-ugc-slider`). Type that in and click "Done". Then click that file in our `sections` folder in our repository and copy it. 
+2. Click `+ Add a new snippet` once again under the `snippets` folder, and add the next file under our [sections](../main/sections) folder (`flickity-ugc-slider`). Type that in and click "Done". Then click that file in our [sections](../main/sections) folder in our repository and copy it. 
 
 3. Go back to the Shopify code editor and paste the code under the right tab (in this case: under `snippet/flickity-ugc-slider.liquid`) and click "Save".
 
-4. Click `+ Add a new snippet` once again under the `snippets` folder and repeat for the rest of the powerups in our `sections` folder in our repository.
+4. Click `+ Add a new snippet` once again under the `snippets` folder and repeat for the rest of the powerups in our [sections](../main/sections) folder in our repository.
 
-> And don't forget to look at the correct settings for each power-up in our `settings` folder.
+> And don't forget to look at the correct settings for each power-up in our [settings](../main/settings) folder.
 
 And that's it!
 
