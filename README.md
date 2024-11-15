@@ -74,6 +74,10 @@ So it should look like this:
 
 > Optionally, you can add `{{ 'newfonts.css' | asset_url | stylesheet_tag }}` under the "powerups-mobile" code if you want to use a custom `@font-face` font.
 
+14. _Important step:_ To prevent videos from stopping after clicking a product variant in Shopify: In the Shopify code editor, in `assets/media-gallery.js`, CLICK anywhere in the window under that tab. Then use ctrl + f (or command + f on mac) to find this line: `window.pauseAllMedia();`
+
+15. Once you find that line, comment it out. You can simply highlight that line and type `ctrl + /` (or `command + /` on macs) to comment out that line. Click `Save` to save your changes.
+ 
 
 ## Now it's time to add your new power-up sections. Here's how to do it:
 
