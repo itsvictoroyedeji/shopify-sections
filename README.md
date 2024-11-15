@@ -3,31 +3,31 @@
 
 I created several "power-ups" sections to enhance your free Shopify themes. I specifically built these using the free "Dawn" theme, but you can use these power-ups for any theme.
 
-## Here are the free power-ups section included, in the order they would best appear in a Shopify product page:
+## Here are the free power-ups section included, in the _order_ they would best appear in a Shopify product page:
 
 ### (Screenshots of each of these are coming soon)
 
-* __Image Banner Top__: This goes above the actual product in the product page. You can include brand logos in this.
+* _Image Banner Top_: This goes above the actual product in the product page. You can include brand logos in this.
 
-* __Gallery Tabs__: A quick gallery that goes right under the actual product listing.
+* _Gallery Tabs_: A quick gallery that goes right under the actual product listing.
 
-* __Flickity UGC Slider__: A video and image slider that shows people creating your product. UGC stands for "User Generated Content", by the way.
+* _Flickity UGC Slider_: A video and image slider that shows people creating your product. UGC stands for "User Generated Content", by the way.
 
-* __Benefits slider__: A slider that shows the benefits in text format that you can easily click and drag.
+* _Benefits slider_: A slider that shows the benefits in text format that you can easily click and drag.
 
-* __Only image__: This goes right above the "hot spots" section. Or if you just want to have a transparent image you can use this for that as well.
+* _Only image_: This goes right above the "hot spots" section. Or if you just want to have a transparent image you can use this for that as well.
 
-* __Hot Spots__: An image of your product that has "blue pulsing spots" on it what lists the benefits on specific parts of your product.
+* _Hot Spots_: An image of your product that has "blue pulsing spots" on it what lists the benefits on specific parts of your product.
 
-* __Video__:__ A video with a header (and subtext) included, instead of just the video that Shopify normally has.
+* _Video_: A video with a header (and subtext) included, instead of just the video that Shopify normally has.
 
-* __Reviews header__: Put this right before your reviews widget (Loox, etc). Has 5 stars you can add plus a top quoted review. Make sure it's the same background as the reviews widget you add.
+* _Reviews header_: Put this right before your reviews widget (Loox, etc). Has 5 stars you can add plus a top quoted review. Make sure it's the same background as the reviews widget you add.
 
-* __Multicolumn benefits__: A multicolumn that guarantees your product is in good shape with the customer. Make sure it's the same color as the footer.
+* _Multicolumn benefits_: A multicolumn that guarantees your product is in good shape with the customer. Make sure it's the same color as the footer.
 
 ### And for the main product page:
 
-* Video Banner: A video that plays at the top of your homepage, preferably when your product is in use. Optionally, you can replace this with the "Image Banner Top" that goes on the tip of your product page.
+* _Video Banner_: A video that plays at the top of your homepage, preferably when your product is in use. Optionally, you can replace this with the "Image Banner Top" that goes on the tip of your product page.
 
 ## Alright, here's the step-by-step on how to use these:
 
