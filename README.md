@@ -136,9 +136,11 @@ So it should look like this:
 
 5. Once you've added all power-ups code, go to your Customizer tab, and _Refresh the page_. Now you can add your new power-ups under the "Template" section in your Product page!
 
+> [Go back to the top][1] to see the recommended order your power-ups should appear.
+
 6. Important: Make sure you follow the settings for each power-up, located in our [settings](../main/settings) folder! This ensures the power-up looks right and works as intended.
 
-> [Go back to the top][1] to see my recommended order your power-ups should appear.
+
 
 And that's it!
 
