@@ -25,7 +25,7 @@ I created several "power-ups" sections to enhance your free Shopify themes. I sp
 
 * _Multicolumn benefits_: A multicolumn that guarantees your product is in good shape with the customer. Make sure it's the same color as the footer.
 
-### And for the main product page:
+### And for the main HOMEPAGE:
 
 * _Video Banner_: A video that plays at the top of your homepage, preferably when your product is in use. Optionally, you can replace this with the "Image Banner Top" that goes on the tip of your product page.
 
@@ -108,7 +108,11 @@ So it should look like this:
 
 > Note: You MUST use these settings or your power-up will not look right.
 
-14. Congrats! You just added your first power-up! Simply repeat steps 2-13 above to add all of the other power-up you want. If you want to know all the power-up do, add all of them if you want.
+14. _Congrats! You just added your first power-up!_ Simply repeat steps 2-13 above to add all of the other power-ups you want. If you want to know what all of the power-ups do, add all of them.
+
+> Important note: For `video.liquid`, do not add that one. Simply [go to the file](../main/sections/video.liquid) and copy the code. Then in your Shopify code editor, under the `assets` folder, click on `video.liquid`.
+
+> Highlight the entire code and paste your code, overwriting what was there before. Then click `Save` to save your changes.
 
 
 ## Here's a quicker version to add all power-ups quickly...
@@ -120,7 +124,13 @@ So it should look like this:
 3. Repeat step 2 to add the rest of the power-up files in our [sections](../main/sections) folder to your Shopify code editor.
 > Note: ctrl+click (or command+click on a mac) to open the link in a new tab.
 
-4. Once you're done, go back to each power-up file in our [sections](../main/sections) folder. Click on each file, then copy the code. Paste the code in your code editor under the CORRECT tab, and click `Save` to save your changes.
+> Important note: For `video.liquid`, do not add that one. Simply [go to the file](../main/sections/video.liquid) and copy the code. Then in your Shopify code editor, under the `assets` folder, click on `video.liquid`.
+
+> Highlight the entire code and paste your code, overwriting what was there before. Then click `Save` to save your changes.
+
+Highlight the entire code and paste your code, overwriting what was there before. Then click `Save` to save your changes.
+
+4. Once all those files are added, go back to each power-up file in our [sections](../main/sections) folder. Click on each file, then copy the code. Paste the code in your code editor under the CORRECT tab, and click `Save` to save your changes.
 
 5. Once you've added all power-ups code, go to your Customizer tab, and Refresh the page. Now you can add your new power-ups under the "Template" section in your Product page!
 
