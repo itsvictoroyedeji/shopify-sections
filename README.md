@@ -120,7 +120,7 @@ So it should look like this:
 3. Repeat step 2 to add the rest of the power-up files in our [sections](../main/sections) folder to your Shopify code editor.
 > Note: ctrl+click (or command+click on a mac) to open link in a new tab.
 
-4. Once you're done, go back to each power-up file in our [sections] folder. Click on each file, then copy the code. Paste the code in your code editor under the CORRECT tab, and click `Save` to save your changes.
+4. Once you're done, go back to each power-up file in our [sections](../main/sections) folder. Click on each file, then copy the code. Paste the code in your code editor under the CORRECT tab, and click `Save` to save your changes.
 
 5. Once you've added all power-ups code, go to your Customizer tab, and Refresh the page. Now you can add your new power-ups under the "Template" section in your Product page!
 
