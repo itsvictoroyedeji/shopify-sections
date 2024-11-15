@@ -76,7 +76,7 @@ So it should look like this:
 
 ## Now it's time to add your new power-up sections. Here's how to do it:
 
-1. Figure out which power-up from above you want to use. In this example we'll add all of them.
+1. Figure out [which power-up from above][1] you want to use. In this example we'll add all of them.
 
 2. In Shopify's code editor, under the `sections` folder, click `+ Add a new section`.
 
@@ -129,3 +129,5 @@ I tested these new liquid sections using the free `Dawn` theme in Shopify. I'm n
 You can always test it out to find out. Other than that, enjoy your new powerups!
 
 ~ Victor
+
+[1]: ../tree/main?tab=readme-ov-file#here-are-the-free-power-up-sections-included-in-the-order-they-would-best-appear-in-a-shopify-product-page
