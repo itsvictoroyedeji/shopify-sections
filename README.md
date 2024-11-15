@@ -50,7 +50,7 @@ I created several "power-ups" sections to enhance your free Shopify themes. I sp
 
 8. Repeat the previous 2 steps for the following 2 files in the [css](../main/sections) folder: `powerups.css` and `powerups-mobile.css`. (You can optionally do `newfonts.css` if you want to use `@font-face`, which is a custom font either from Google or a 3rd party). Copy each file and paste it in Shopify under the corresponding tab.
 
-9. For `flickity.pkgd.min.js`, that is in our root folder in our repository. Copy the code there and paste into Shopify under `assets/flickity.pkgd.min.js`.
+9. For `flickity.pkgd.min.js`, that is in our [root](../) folder in our repository. Copy the code there and paste into Shopify under `assets/flickity.pkgd.min.js`.
 
 10. __Now for these to work__, in your Shopify code editor, under the `layout` folder, click on `theme.liquid`.
 
