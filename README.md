@@ -3,7 +3,7 @@
 
 I created several "power-ups" sections to enhance your free Shopify themes. I specifically built these using the free "Dawn" theme, but you can use these power-ups for any theme.
 
-## Here are the free power-ups section included, in the _order_ they would best appear in a Shopify product page:
+## Here are the free power-up [sections](../main/sections) included, in the _order_ they would best appear in a Shopify product page:
 
 ### (Screenshots of each of these are coming soon)
 
