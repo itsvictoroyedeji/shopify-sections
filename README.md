@@ -57,7 +57,7 @@ I created several "power-ups" sections to enhance your free Shopify themes. I sp
 
 > You should a line something similar to: `{{ 'base.css' | asset_url | stylesheet_tag }}`
 
-12. Under that base.css line, add these 2 new lines:
+12. Under that base.css line, add these 2 new lines on *separate* lines:
 `{{ 'powerups.css' | asset_url | stylesheet_tag }}`
 `{{ 'powerups-mobile.css' | asset_url | stylesheet_tag }}`
 
@@ -65,6 +65,8 @@ So it should look like this:
 `{{ 'base.css' | asset_url | stylesheet_tag }}`
 `{{ 'powerups.css' | asset_url | stylesheet_tag }}`
 `{{ 'powerups-mobile.css' | asset_url | stylesheet_tag }}`
+
+(each code should be on a separate line)
 
 And it should be __in that order__, or your CSS won't 100% work correctly.
 
