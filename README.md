@@ -81,7 +81,7 @@ So it should look like this:
 2. In Shopify's code editor, under the `sections` folder, click `+ Add a new section`.
 
 3. Make sure `liquid` is selected. Then look under our [sections](../main/sections) folder to see which power-up you want to add. (All of our power-ups are located here). For example, if you want the __Image Banner Top__, you'll use the `image-banner-top.liquid` file.
-⋅⋅* Simply add the file name `image-banner-top` into the textbox in Shopify. Then click "Done".
+  * Simply add the file name `image-banner-top` into the textbox in Shopify. Then click "Done".
 
 4. In our repository, click on the power-up (in this case, `image-banner-top.liquid`). The click on the 2 boxes next to "Raw" to copy the raw code.
 
