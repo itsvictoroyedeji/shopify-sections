@@ -99,7 +99,7 @@ So it should look like this:
 
 11. Now you have your power-up. For this one (Image Banner Top), move it to the very top above the "Product Information" to use.
 
-12. Now...it looks weird, right? Good news is there are certain settings needed for this to work. To find those settings, look under the `settings` folder in our repository. In our case, click `image-banner-top-settings.txt` in that settings folder.
+12. Now...it looks weird, right? Good news is there are certain settings needed for this to work. To find those settings, look under the [settings](../main/sections) folder in our repository. In our case, click `image-banner-top-settings.txt` in that settings folder.
 
 13. Follow the settings to know which options to choose. Once the options are right, the design of the power-up will change.
 
