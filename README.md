@@ -42,7 +42,7 @@ I created several "power-ups" sections to enhance your free Shopify themes. I sp
 4. Optionally, you can create a 5th file: `newfonts.css` if you want to add custom fonts using `@font-face`.
 
 5. In our repository, go to the [css](../main/css) folder.
-> Note: Right-click to open in a new tab
+> Note: ctrl+click (or command+click on a mac) to open link in a new tab.
 
 6. Click on the first file: `flickity.css`. Then on the right side, new to "Raw", click on the image that looks like 2 boxes. This copies the raw file.
 
