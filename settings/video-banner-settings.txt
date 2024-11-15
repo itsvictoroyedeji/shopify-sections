@@ -13,7 +13,7 @@ Desktop content alignment: Left
 Color scheme: This is for the main text, which should either be white or black.
 Animations: None
 Mobile layout: Center
-Stack images on logo: Checked
+Stack images on mobile: Checked
 Show container of mobile: Uncheck
 
 For Heading block:
@@ -22,4 +22,4 @@ Heading Size: Medium
 For Text block:
 Text style: Body
 
-For Button label, use the first button. And make sure button matches your brand!
+For Button label, use the first button. And make sure button matches your brand's colors!
