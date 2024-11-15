@@ -66,8 +66,8 @@ So it should look like this:
 `{{ 'powerups.css' | asset_url | stylesheet_tag }}`
 `{{ 'powerups-mobile.css' | asset_url | stylesheet_tag }}`
 
->> Each code should be on a separate line,
->> and it should be __in that order__, or your CSS won't 100% work correctly.
+> Each code should be on a separate line,
+> and it should be __in that order__, or your CSS won't 100% work correctly.
 
 13. Click "Save" to save your changes.
 
