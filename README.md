@@ -1,4 +1,4 @@
-# Custom Shopify Sections
+# Custom Shopify Store Power-ups
 ### Power-ups to supercharge your sales
 
 I created several "power-ups" sections to enhance your free Shopify themes. I specifically built these using the free "Dawn" theme, but you can use these power-ups for any theme.
