@@ -3,7 +3,7 @@
 
 I created several "power-ups" sections to enhance your free Shopify themes. I specifically built these using the free "Dawn" theme, but you can use these power-ups for any theme.
 
-## Here are the free power-up [sections](../main/sections) included, in the _order_ they would best appear in a Shopify product page:
+## Here the list of power-ups, in the _order_ they would best appear in a Shopify product page:
 
 ### (Screenshots of each of these are coming soon)
 
@@ -77,6 +77,8 @@ So it should look like this:
 14. _Important step:_ To prevent videos from stopping after clicking a product variant in Shopify: In the Shopify code editor, in `assets/media-gallery.js`, CLICK anywhere in the window under that tab. Then use ctrl + f (or command + f on mac) to find this line: `window.pauseAllMedia();`
 
 15. Once you find that line, comment it out. You can simply highlight that line and type `ctrl + /` (or `command + /` on macs) to comment out that line. Click `Save` to save your changes.
+
+16. Finally, add all images in our [assets] folder into Shopify. Simply go to your Shopify dashboard. Then click on "Content", then "Files". Click `Upload files` on the top-right, and add all images for our assets folder into it. These are needed when using some of our power-ups!
  
 
 ## Now it's time to add your new power-up sections. Here's how to do it:
