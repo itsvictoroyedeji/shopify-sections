@@ -531,7 +531,7 @@ h2.title-benefits-slider-h2 {
 .benefits_Slider .flickity-button {
     position: relative;
     left: 85%!important;
-    background: #94a6b6;
+    background: rgba(var(--color-button-text), .75);
     top: 70px;
 }
 
