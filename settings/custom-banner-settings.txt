@@ -1,0 +1,20 @@
+Name of the section in the Customizer is called "Custom Page Top Banner".
+
+1. For main background image, a Rectangular image is best. These dimensions work best: 2880px width x 1678px height. Make it in Canva.
+
+2. Add your page title. If it your story, click on "Default Page" on top and create a new template called "our story" (Based on "Default page"). Then:
+
+3. CLICK ON "Page" on the left side. Then on the right side, look for "Custom CSS". Then add this code:
+
+h1 {
+  display: none;
+}
+
+That removes the "Our Story" title from the page (it only appears on the Custom Page Top Banner). Only do this if you're using this Custom Banner.
+
+4. For everything else, make sure you're using the best color scheme for your brand. You may have to create a NEW color scheme that has:
+- white text (#FFF)
+- Solid button background color that matches your brand
+- white solid button label (#FFF)
+
+And you're good to go!

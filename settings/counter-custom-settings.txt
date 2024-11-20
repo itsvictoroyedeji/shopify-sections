@@ -1,0 +1,7 @@
+Name of the section is called "Stats Counter"
+
+For overall settings, make sure your color scheme matches your brand colors
+
+For each block, make sure you don't add any other characters besides numbers or +, or the stat will not display properly.
+
+You can also remove any of the 4 Stats blocks if you want.
