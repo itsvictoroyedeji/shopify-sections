@@ -1061,20 +1061,20 @@ h2.title.inline-richtext {
 }
 
 .btn-benefit-wrapper {
-    border-radius: 60px;
-    /* background: #001233; */
-    color: rgba(var(--color-foreground), 0.9);
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-transform: uppercase;
-    width: fit-content;
-    text-decoration: none;
-    padding: 12px 20px;
-    transition: .5s all;
-    border: none!important;
-    cursor: pointer;
+  border-radius: 60px;
+  color: rgba(var(--color-button-text),1);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  width: fit-content;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: .5s all;
+  border: none!important;
+  cursor: pointer;
+  background: rgba(var(--color-button),1);
 }
 
 .btn-benefit-wrapper span {
