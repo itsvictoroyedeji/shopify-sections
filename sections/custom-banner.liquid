@@ -1,0 +1,166 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: 27px;
+    padding-bottom: 45px;
+    background-color: ;
+    height:73vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* 
+   * For "background-image" below, replace the 3 sets of 4 numbers (/0622/8072/8756/ in this example) with your own set of numbers.
+   * To find it, go to your Shopify Admin page > Content > Files. Copy the URL from one of your images, then
+   * paste it a new tab in your browser to see the url. You will have your own 3 sets of 4 numbers (which are the same for all images/gifs in your account).
+   * Replace those 3 sets of 4 numbers below.
+
+   * This shows up as the background image of your custom banner, which you can change in your Customizer.
+   */
+  
+  .section-{{section.id}}-padding {
+    background-image: url('https://cdn.shopify.com/s/files/1/0622/8072/8756/{{section.settings.background_image}}')
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 36px;
+      padding-bottom: 60px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 36px;
+      padding-bottom: 36px;
+    }
+  }
+{%- endstyle -%}
+
+<style>
+  
+  #shopify-section-{{ section.id }} {
+    margin-block-start: calc(-1 * var(--header-height) * var(--section-is-first));
+  }
+  .custom-banner-content-main .page-width {
+    height: 100%;
+}
+  .custom-banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+.custom-banner-content h2 {
+    /* font-family: General Sans; */
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 70.56px;
+    text-align: left;
+    color: rgba(var(--color-foreground));
+    width: 38%;
+    margin: 0;
+    margin-bottom: 20px;
+}
+@media(max-width:1025px){
+  .custom-banner-content h2 {
+      width: 65%;
+  }
+}
+@media(max-width:768px){
+  .custom-banner-content h2 {
+    font-size: 50px;
+    line-height: 60px;
+    width: 70%;
+  }
+}
+@media(max-width:450px){
+  .custom-banner-content h2 {
+    width: 100%;
+  }
+
+  .custom-banner-content h2 { 
+    text-align:center; 
+  }
+}
+  
+</style>
+
+<div class="section-{{ section.id }}-padding custom-banner-content-main color-{{ section.settings.color_scheme }}" allow-transparent-header>
+  <div class="page-width">
+    <div class="custom-banner-content">
+      <h2>
+        {%- if section.settings.page_title != blank -%}
+          {{ section.settings.page_title | escape }}
+        {%- else -%}
+          Page title
+        {%- endif -%}
+      </h2> 
+      {%- if section.settings.button_label_1 != blank -%}
+        <a
+          {% if section.settings.button_link_1 == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.button_link_1 }}"
+          {% endif %}
+          class="btn-benefit-wrapper"
+        >
+          {{- section.settings.button_label_1 | escape -}}
+          <span>
+            <img src="https://cdn.shopify.com/s/files/1/0622/8072/8756/files/small_benefit_arrow.png?v=1728975338" width="auto" height="auto">
+          </span>
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Custom Page Top Banner",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Main image",
+        "info": "Displays in the backgound"
+      },
+      {
+        "type": "text",
+        "id": "page_title",
+        "label": "Add the Page Title Here",
+        "default": "Our Story"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-4"
+      },
+      {
+        "type": "text",
+        "id": "button_label_1",
+        "default": "t:sections.image-banner.blocks.buttons.settings.button_label_1.default",
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+        "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+      },
+      {
+        "type": "url",
+        "id": "button_link_1",
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+      }
+    ],
+    "presets": [
+    {
+      "name": "Custom Page Top Banner",
+    }
+  ]
+}
+{% endschema %}

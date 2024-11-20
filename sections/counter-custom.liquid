@@ -1,0 +1,165 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: 9px;
+    padding-bottom: 24px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 12px;
+      padding-bottom: 32px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+{%- endstyle -%}
+
+<style>
+  .counter-main {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(204, 205, 206, 1);
+  }
+  .inner-counter-main {
+      width: 23%;
+  }
+  .inner-counter-main div {
+      color: rgba(var(--color-foreground), 1);
+      font-size: 50px;
+      font-weight: 600;
+      text-align: center;
+  }
+  .inner-counter-main h3 {
+      color: rgba(var(--color-foreground), 0.65);
+      font-size: 23px;
+      font-weight: 400;
+      text-align: center;
+      margin: 0;
+  }
+
+  @media(max-width:1025px) {
+    .inner-counter-main div {
+        font-size: 35px;
+    }
+    .inner-counter-main h3 {
+        font-size: 18px;
+    }
+  }
+
+  @media(max-width:768px) {
+    .counter-main {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        padding-left: 14px;
+        gap: 30px;
+    }
+       .inner-counter-main {
+        width: 45%;
+    }
+    .inner-counter-main div {
+        font-size: 35px;
+    }
+  }
+</style>
+
+<div class="section-main-{{ section.id }}-padding">
+  <div class="page-width">
+    <div class="counter-main section-{{ section.id }}-padding color-{{ section.color_scheme }}">
+      {% for block in section.blocks %}
+        {%- if block.settings.stats != blank -%}
+          <div class="inner-counter-main">
+            <div class="counter-custom" data-target="{{ block.settings.stats }}"></div>
+            <h3>{{ block.settings.stats_text }}</h3>
+          </div>
+        {%- endif -%}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.counter-custom').forEach((counter) => {
+    const targetText = counter.getAttribute('data-target');
+    const target = parseFloat(targetText.replace('+', ''));
+    let count = 0;
+    const step = target / 200; // Adjust the speed if needed
+    const hasPlus = targetText.includes('+');
+
+    const updateCount = () => {
+      if (count < target) {
+        count = Math.min(count + step, target);
+        counter.innerText = count.toFixed(1).replace(/\.0$/, '') + (hasPlus ? '+' : ''); // Display with 1 decimal place and add + if needed
+      } else {
+        counter.innerText = target.toFixed(1).replace(/\.0$/, '') + (hasPlus ? '+' : ''); // Display with 1 decimal place and add + if needed
+        clearInterval(interval);
+      }
+    };
+
+    const interval = setInterval(updateCount, 10); // Update every 10ms
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Stats Counter",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stats",
+      "name": "Stats",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "stats",
+          "label": "Stat",
+          "default": "10000+",
+          "info": "No commas ( , ) allowed."
+        },
+        {
+          "type": "text",
+          "id": "stats_text",
+          "label": "Stat Text",
+          "default": "Products Sold"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stats Counter",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "stats"
+        },
+        {
+          "type": "stats"
+        },
+        {
+          "type": "stats"
+        },
+        {
+          "type": "stats"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
