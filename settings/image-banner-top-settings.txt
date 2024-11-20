@@ -18,7 +18,7 @@ Uncheck "Stack images on mobile"
 Check "Show container on mobile"
 And in the "Theme Settings" section, uncheck "Reveal sections on scroll" (if you want).
 
-For the "Logo Images", you can remove the Logo images block if you want. But if you do, go to "assets/powerups-mobile.css" in your Shopify code editor. Then search: .hero-section-main .banner__buttons
+For the "Logo Images", you can remove the Logo images block if you want. But if you do, go to "assets/powerups-mobile.css" in your Shopify code editor (note the "mobile"). Then search: " .hero-section-main .banner__buttons "
 
 Once you do, add this declaration within that css block of code: padding: 2rem;
 
