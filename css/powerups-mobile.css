@@ -249,5 +249,33 @@
     margin: auto;
     display: grid;
     justify-content: center;
+    /* Comment this out when you have brand logos: */
+    padding: 2rem; 
+  }
+}
+
+/* Custom Top Image Banner */
+
+@media only screen and (max-width: 500px) {
+  .custom-banner-content a.btn-benefit-wrapper {
+    margin: 0 auto;
+  }
+  /* .custom-banner-content .btn-benefit-wrapper span {
+    display: none;
+  } */
+}
+
+/* Stats Counter */
+
+@media only screen and (max-width: 500px) {
+  .counter-main {
+      flex-wrap: nowrap!important;
+      gap: 10px!important;
+  }
+  .inner-counter-main div {
+    font-size: 20px!important;
+  }
+  .inner-counter-main h3 {
+    font-size: 11px!important;
   }
 }

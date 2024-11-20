@@ -1231,6 +1231,10 @@ h2.banner__heading.inline-richtext.h0 {
     height: 50px;
 }
 
+.banner--mobile-bottom .banner__box {
+  padding: 3rem !important;
+}
+
 @media (max-width: 1350px) {
   h2.banner__heading.inline-richtext.h0 {
     font-size: 80px;
