@@ -25,6 +25,14 @@ I created several "power-ups" sections to enhance your free Shopify themes. I sp
 
 * _Multicolumn benefits_: A multicolumn that guarantees your product is in good shape with the customer. Make sure it's the same color as the footer.
 
+* _As Seen On Logos_: A logo scroller that shows social proof to customers.
+
+* _Custom Counter:_ A social proof counter that can either appear on your About Page or your Homepage (or your main product page). This basically shows your stats.
+
+* _Custom Banner_: Similar to an Image Banner, but it goes on top of any `Page` you like. For example, it works well on top of your `Our Story` page or on the `Contact Us` page. 
+
+>> In fact, your "Our Story" page can have both the `Custom Banner`, the `Custom Counter` right under, then the `Page` section under that (if you're editing a Page in the Shopify Customizer). [Here's a good example][3].
+
 ### And for the main HOMEPAGE:
 
 * _Video Banner_: A video that plays at the top of your homepage, preferably when your product is in use. Optionally, you can replace this with the "Image Banner Top" that goes on the tip of your product page.
@@ -157,3 +165,5 @@ You can always test it out to find out. Other than that, enjoy your new powerups
 [1]: ../main?tab=readme-ov-file#here-the-list-of-power-ups-in-the-order-they-would-best-appear-in-a-shopify-product-page
 
 [2]: ../main#heres-a-quicker-version-to-add-all-power-ups-quickly
+
+[3]: https://www.ventyfan.com/pages/about-us
