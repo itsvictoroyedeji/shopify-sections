@@ -1,0 +1,20 @@
+For the main settings:
+
+1. Header text: Either use "As Featured On" or leave it blank
+2. Header font size: 30px
+3. Header text align: Center
+4. Scrolling speed: 35
+
+Pause on hover and Shadow: leave uncheked
+Slider margin top: 16 px
+Slider padding top: 0px
+
+Slider padding bottom: 0px
+
+Slider Items Gap and Slider Items Gap-Mobile: 30px
+
+Slider Direction: Left
+
+Width of icons in pixel: 200px
+
+Leave everything else as is...simply add your logo blocks and you're good to do. (Make sure the images are transparent!)
