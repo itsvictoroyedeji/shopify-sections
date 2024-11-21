@@ -17,4 +17,23 @@ That removes the "Our Story" title from the page (it only appears on the Custom 
 - Solid button background color that matches your brand
 - white solid button label (#FFF)
 
-And you're good to go!
+Finally:
+
+For "background-image" css (locaed in the custom-banner.liquid file), replace the 3 sets of 4 numbers (/0622/8072/8756/ in this example) with your own set of numbers.
+
+ Here's an example:
+  
+  .section-{{section.id}}-padding {
+    background-image: url('https://cdn.shopify.com/s/files/1/0622/8072/8756/{{section.settings.background_image}}')
+  }
+
+> To find your own set of numbers, go to your Shopify Admin page > Content > Files. Copy the URL from one of your images, then paste it on a new tab in your browser to see the url. You will have your own 3 sets of 4 numbers (which are the same for all images/gifs in your account).
+
+> Replace those 3 sets of 4 numbers after the https://cdn.shopify.com/s/files/1/(your numbers here)/{{section.settings.background_image}}'
+
+This shows up as the background image of your custom banner, which you can change in your Customizer.
+
+ 
+
+
+  Once you're done...you're good to go!
