@@ -9,14 +9,15 @@
     background-repeat: no-repeat;
   }
 
-  /* 
+  {% comment %}
    * For "background-image" below, replace the 3 sets of 4 numbers (/0622/8072/8756/ in this example) with your own set of numbers.
-   * To find it, go to your Shopify Admin page > Content > Files. Copy the URL from one of your images, then
+   * To find it, go to your Shopify Admin page, go to Content > Files. Copy the URL from one of your images, then
    * paste it on a new tab in your browser to see the url. You will have your own 3 sets of 4 numbers (which are the same for all images/gifs in your account).
-   * Replace those 3 sets of 4 numbers below.
+   * 
+   * Replace those 3 sets of 4 numbers after the https://cdn.shopify.com/s/files/1/(your numbers here)/{{section.settings.background_image}}
 
    * This shows up as the background image of your custom banner, which you can change in your Customizer.
-   */
+  {% endcomment %}
   
   .section-{{section.id}}-padding {
     background-image: url('https://cdn.shopify.com/s/files/1/0622/8072/8756/{{section.settings.background_image}}')
