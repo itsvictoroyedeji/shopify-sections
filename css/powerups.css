@@ -464,7 +464,7 @@ h2.title-benefits-slider-h2 {
     font-size: 50px;
     font-weight: 600;
     text-align: left;
-    color: #fff;
+    color: rgba(var(--color-button));
 }
 
 .benefits_Slider .flickity-section__carousel {
